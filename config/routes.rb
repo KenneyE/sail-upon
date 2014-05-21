@@ -7,6 +7,9 @@ App::Application.routes.draw do
   namespace :api, defaults: { format: :json } do
     resources :users, only: [:edit, :index]
     get '/user', to: 'users#show', as: 'user'
+
+    resources :interests, only: [:show]
   end
+
 
 end
