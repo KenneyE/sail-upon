@@ -15,7 +15,7 @@
 //= require turbolinks
 //= require underscore
 //= require backbone
-//= require final_project
+//= require app
 //= require_tree ../templates
 //= require_tree ./models
 //= require_tree ./collections
