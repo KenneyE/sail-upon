@@ -1,11 +1,10 @@
 module Api
-  class UsersController < ApplicationController
+  class UsersController < ApiController
 
     def show
       @user = current_user
       render :show, json: @user
     end
-
 
     private
     def user_params

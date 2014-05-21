@@ -4,12 +4,12 @@ App.Routers.AppRouter = Backbone.Router.extend({
     },
     
     routes: {
-        "users/:id": "userShow",
+        "": "userShow",
         
     },
     
     userShow: function (id) {
-        var user = new App.Models.User({id: id});
+        var user = new App.Models.User();
         user.fetch();
         
         var view = new App.Views.UserShow({ model: user });
