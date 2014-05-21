@@ -3,7 +3,7 @@ module Api
 
     def show
       @user = User.find(params[:id])
-      render :show, json: @user
+      render partial: "api/users/user", locals: { user: @user }
     end
 
     private
