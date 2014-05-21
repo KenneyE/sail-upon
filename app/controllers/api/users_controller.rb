@@ -2,7 +2,7 @@ module Api
   class UsersController < ApiController
 
     def show
-      @user = current_user
+      @user = User.find(params[:id])
       render :show, json: @user
     end
 

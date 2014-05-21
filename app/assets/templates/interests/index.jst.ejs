@@ -1,0 +1,16 @@
+<h1>Your Interests</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <% interests.each (function (interest) { %>
+        <tr>
+            <td><%= interest.escape('name') %></td>
+            <td><%= interest.escape('description') %></td>
+        </tr>
+    <% }) %>
+</table>

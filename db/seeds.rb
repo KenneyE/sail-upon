@@ -9,12 +9,12 @@
 
 
 5.times do |i|
-  Interest.create(name: "Interest ##{i}", description: "An interest")
-  User.create(username: "User##{i}",
+  Interest.create(name: "Interest#{i}", description: "An interest")
+  User.create(username: "User#{i}",
               password: "foobar")
 end
 
 3.times do |i|
-  UserInterest.create(user_id: 1, interest_id: i)
+  UserInterest.create(user_id: 1, interest_id: i )
   UserInterest.create(user_id: 2, interest_id: i+1)
 end

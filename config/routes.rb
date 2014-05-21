@@ -5,10 +5,10 @@ App::Application.routes.draw do
   resource :session, only: [:create, :new, :destroy]
 
   namespace :api, defaults: { format: :json } do
-    resources :users, only: [:edit, :index]
-    get '/user', to: 'users#show', as: 'user'
-
-    resources :interests, only: [:show]
+    resources :users, only: [:edit, :index, :show] do
+      resources :interests, shallow: true
+    end
+    # get '/user', to: 'users#show', as: 'user'
   end
 
 
