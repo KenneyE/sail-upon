@@ -8,10 +8,11 @@ App::Application.routes.draw do
     resources :users, only: [:edit, :index, :show] do
       resources :interests, shallow: true
     end
+
+    resources :websites
+
     # get '/user', to: 'users#show_current'
     get '/interests', to: 'interests#full_index'
 
   end
-
-
 end

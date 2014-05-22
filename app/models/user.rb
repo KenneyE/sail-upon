@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
   has_many :user_interests
   has_many :interests, through: :user_interests
 
+  has_many :submitted_sites, class_name: "Website", foreign_key: :submitter_id
+
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
     return (user && user.is_password?(password)) ? user : nil
