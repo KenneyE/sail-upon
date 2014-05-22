@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class WebsiteInterestsTest < ActiveSupport::TestCase
+class WebsiteInterestTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

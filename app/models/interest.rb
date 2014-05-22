@@ -6,4 +6,8 @@ class Interest < ActiveRecord::Base
 
   has_many :website_interests
   has_many :websites, through: :website_interests, source: :website
+
+  def find_website_by_interest
+    self.websites.sample
+  end
 end

@@ -9,10 +9,9 @@ App::Application.routes.draw do
       resources :interests, shallow: true
     end
 
-    resources :websites
-
+    # resources :websites
+    get '/websites', to: 'websites#show'
     # get '/user', to: 'users#show_current'
     get '/interests', to: 'interests#full_index'
-
   end
 end

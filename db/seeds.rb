@@ -7,19 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-
-20.times do |i|
-  Interest.create(name: "Interest#{i}", description: "An interest")
-  User.create(username: "User#{i}",
-              password: "foobar")
-end
-
-10.times do |i|
-  UserInterest.create(user_id: 1, interest_id: i )
-  UserInterest.create(user_id: 2, interest_id: i+5)
-  UserInterest.create(user_id: 3, interest_id: i+5)
-end
-
+User.create(username: "Guest User", password: "password")
+User.create(username: "Eric", password: "foobar")
 
 
 
@@ -76,7 +65,15 @@ sites = ["https://www.youtube.com/watch?v=I4r729ZMinQ",
 "http://www.youtube.com/watch?v=yn3FWb-vQQ4",
 "http://aeon.co/magazine/living-together/james-somers-web-developer-money/"]
 
+20.times do |i|
+  Interest.create(name: "Interest#{i}", description: "An interest")
+  UserInterest.create(user_id: 1, interest_id: i )
+  UserInterest.create(user_id: 2, interest_id: i )
+end
 
 sites.each_with_index do |site, idx|
   Website.create(url: site, title: "Sample Site #{idx}", submitter_id: 1)
+  Interest.all.each do |interest|
+    WebsiteInterest.create(website_id: idx, interest_id: interest.id )
+  end
 end

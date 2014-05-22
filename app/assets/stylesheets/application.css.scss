@@ -21,3 +21,19 @@
 .panel {
     border-radius: 0;
 }
+
+.website-iframe {
+    height: 100%;
+    padding: 0;
+}
+
+#content {
+    position: relative;
+    height: 100%;
+    margin-top: -20px;
+}
+
+.container-fluid {
+    padding: 0;
+    margin: 0;
+}

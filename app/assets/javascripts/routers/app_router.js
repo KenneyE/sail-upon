@@ -8,6 +8,7 @@ App.Routers.AppRouter = Backbone.Router.extend({
         "users/:user_id/interests": "userInterestsIndex",
         "interests": "interestsIndex",
         "interests/:id": "interestShow", 
+        "sail": "websiteShow",
     },
     
     interestsIndex: function () {
@@ -43,4 +44,10 @@ App.Routers.AppRouter = Backbone.Router.extend({
         var view = new App.Views.UserShow({ model: user });
         this.$rootEl.html(view.render().$el);
     },
+    
+    websiteShow: function () {
+
+        var view = new App.Views.WebsiteShow();
+        this.$rootEl.html(view.render().$el);
+    }
 });
