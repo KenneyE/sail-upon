@@ -1,4 +1,10 @@
 window.App.Models.Interest = Backbone.Model.extend ({
-    urlRoot: "api/interests",
+    url: function () {        
+        if (this.model.isNew) {
+            return "api/interests";
+        } else {
+            return "api/interests/" + this.model.id;
+        }
+    },
     
 });

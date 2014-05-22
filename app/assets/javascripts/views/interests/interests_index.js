@@ -4,9 +4,15 @@ window.App.Views.InterestsIndex = Backbone.View.extend ({
     },
     
     render: function () {
-       var content = this.template({ interests: this.collection });
-       this.$el.html(content);
-       return this;
+      var content = this.template();
+      this.$el.html(content);
+      var that = this;
+
+      this.collection.each(function (interest) {
+        var view = new App.Views.InterestShow({ model: interest });
+        that.$el.append(view.render().$el);
+      });
+      return this;
     },
 
     template: JST["interests/index"],

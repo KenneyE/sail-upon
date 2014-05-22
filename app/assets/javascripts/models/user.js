@@ -1,5 +1,12 @@
 window.App.Models.User = Backbone.Model.extend ({
-    urlRoot: "api/users",
+    url: function () {
+        
+        if (this.id) {
+            return "api/users/" + this.id;
+        } else {
+            return "api/user"
+        }
+    },
 
     interests: function () {
         this._interests = this._interests || 

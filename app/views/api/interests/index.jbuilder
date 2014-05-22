@@ -1,0 +1,1 @@
+json.array! @interests, partial: 'api/interests/interest', as: :interest

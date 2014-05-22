@@ -4,14 +4,14 @@ App.Routers.AppRouter = Backbone.Router.extend({
     },
     
     routes: {
-        
         "users/:id": "userShow",
-        "users/:user_id/interests": "interestsIndex",
+        "users/:user_id/interests": "userInterestsIndex",
+        "interests": "interestsIndex",
         "interests/:id": "interestShow", 
     },
     
-    interestsIndex: function (user_id) {
-        var interests = new App.Collections.UserInterests({ user_id: user_id });
+    interestsIndex: function () {
+        var interests = new App.Collections.Interests();
         interests.fetch();
         
         var view = new App.Views.InterestsIndex({ collection: interests });
@@ -23,6 +23,16 @@ App.Routers.AppRouter = Backbone.Router.extend({
         interest.fetch();
         
         var view = new App.Views.InterestShow({model: interest});
+        this.$rootEl.html(view.render().$el);
+    },
+    
+    userInterestsIndex: function (user_id) {
+        var user = new App.Models.User({id: user_id});
+        
+        var interests = new App.Collections.UserInterests([], { user: user});
+        interests.fetch();
+        
+        var view = new App.Views.InterestsIndex({ collection: interests });
         this.$rootEl.html(view.render().$el);
     },
     
