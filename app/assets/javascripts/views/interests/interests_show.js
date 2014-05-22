@@ -37,14 +37,16 @@ window.App.Views.InterestShow = Backbone.View.extend ({
 
     toggleFollow: function (event) {
         var view = this;
-
+        $(event.target.parentElement).find(".follow-btn").toggleClass("hidden");
         if (view.is_interested) {
-            $(event.target.parentElement).find(".follow-btn").toggleClass("hidden");
+            debugger
             view.current_user.interests().remove(view.model);
+            view.current_user.save();
             // view.current_user.interests().sync("post",
             //          view.current_user.interests() );
         } else {
-            view.current_user.interests().add(view.model);
+            debugger
+            view.current_user.interests().add(view.model); 
         }
 
     },
