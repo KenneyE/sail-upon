@@ -8,13 +8,14 @@
 
 
 
-5.times do |i|
+20.times do |i|
   Interest.create(name: "Interest#{i}", description: "An interest")
   User.create(username: "User#{i}",
               password: "foobar")
 end
 
-3.times do |i|
+10.times do |i|
   UserInterest.create(user_id: 1, interest_id: i )
-  UserInterest.create(user_id: 2, interest_id: i+1)
+  UserInterest.create(user_id: 2, interest_id: i+5)
+  UserInterest.create(user_id: 3, interest_id: i+5)
 end

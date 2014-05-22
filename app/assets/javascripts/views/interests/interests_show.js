@@ -1,6 +1,6 @@
 window.App.Views.InterestShow = Backbone.View.extend ({
 
-    className: "col-xs-4",
+    className: "col-xs-2",
 
     initialize: function (options) {
         var view = this;
