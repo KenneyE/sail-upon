@@ -1,7 +1,5 @@
 class CreateWebsiteInterests < ActiveRecord::Migration
   def change
-    drop_table :website_interests
-
     create_table :website_interests do |t|
       t.references :website, index: true, null: false
       t.references :interest, index: true, null: false
