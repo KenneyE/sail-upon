@@ -16,37 +16,37 @@ window.App.Views.InterestShow = Backbone.View.extend ({
             view.is_interested = (_.find(interests.models, function (interest) {
                 return interest.id === view.model.id;
             }));
+            view.render()
         }
     })},
 
     events: {
-        "click .follow, .unfollow": "toggleFollow", 
+        "click .follow-btn": "toggleFollow", 
     },
 
     render: function () {
-    
         var content = this.template({ interest: this.model, 
             interested: this.is_interested});
                                   
             this.$el.data(String(this.model.id));
             this.$el.html(content);
             return this;
-        },
+    },
 
-        template: JST["interests/show"],
+    template: JST["interests/show"],
 
-        toggleFollow: function (event) {
-            var view = this;
+    toggleFollow: function (event) {
+        var view = this;
 
-            if (view.is_interested) {
-                debugger
-                view.current_user.interests().remove(view.model);
-                // view.current_user.interests().sync("post",
-                //          view.current_user.interests() );
-            } else {
-                view.current_user.interests().add(view.model);
-            }
+        if (view.is_interested) {
+            $(event.target.parentElement).find(".follow-btn").toggleClass("hidden");
+            view.current_user.interests().remove(view.model);
+            // view.current_user.interests().sync("post",
+            //          view.current_user.interests() );
+        } else {
+            view.current_user.interests().add(view.model);
+        }
 
-        },
+    },
 
-    });
+});

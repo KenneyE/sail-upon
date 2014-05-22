@@ -7,12 +7,12 @@
     </div>
 
     <div class="panel-footer">
-        <button class="btn btn-sm follow" data-id="<%= interest.id %>">
         <% if(interested) { %>
-            Unfollow
+            <button class="btn btn-sm follow-btn" data-id="<%= interest.id %>">Unfollow</button>
+            <button class="btn btn-sm follow-btn hidden" data-id="<%= interest.id %>">Follow</button>
         <% } else { %>
-            Follow
+            <button class="btn btn-sm follow-btn hidden" data-id="<%= interest.id %>">Unfollow</button>
+            <button class="btn btn-sm follow-btn" data-id="<%= interest.id %>">Follow</button>
         <% } %>
-        </button>
     </div>
 </div>
