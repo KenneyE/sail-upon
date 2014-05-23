@@ -1,15 +1,15 @@
-<div class="panel panel-default">
+<div class="panel panel-default interest-panel">
     <div class="panel-heading interest-panel-heading">
         <h3 class="panel-title"><%= interest.escape("name") %></h3>
     </div>
-    <div class="panel-body">
-        <div class="panel-interest-image">Photo Here</div>
-        <div class="panel-interest-description">
+    <div class="panel-body interest-panel-body">
+        <div class="interest-panel-image">Photo Here</div>
+        <div class="interest-panel-description">
             <%= interest.escape("description") %>
         </div>
     </div>
 
-    <div class="panel-footer">
+    <div class="panel-footer interst-panel-footer">
         <% if(interested) { %>
             <button class="btn btn-sm follow-btn" data-id="<%= interest.id %>">Unfollow</button>
             <button class="btn btn-sm follow-btn hidden" data-id="<%= interest.id %>">Follow</button>
