@@ -125,12 +125,12 @@ sites = {
 "http://livingwood.org/" => ["Art", "Making Things"] ,
 "https://vimeo.com/95252357" => ["Making Things", "Movies"] ,
 "http://www.musictonic.com" => ["Music"] ,
-"www.boreme.com/posting.php?id=9425&page=1/" => ["Video Games"] ,
+"http://www.boreme.com/posting.php?id=9425&page=1/" => ["Video Games"] ,
 "http://www.io9.com/5893615/absolutely-mindblowing-video-shot-from-the-space-shuttle-during-launch/" => ["Astronomy", "Science", "Generally Awesome"] ,
-"www.gtspirit.com/wp-content/gallery/pagani-huayra-road-test-1/21.jpg/" => ["Cars", "Photography"] ,
+"http://www.gtspirit.com/wp-content/gallery/pagani-huayra-road-test-1/21.jpg/" => ["Cars", "Photography"] ,
 "http://www.youtube.com/watch?v=yn3FWb-vQQ4" => [""] ,
 "http://aeon.co/magazine/living-together/james-somers-web-developer-money/" => ["Science", "Making Things"] ,
-"blog.assaflavie.com/touch/" => ["Science"]
+"http://blog.assaflavie.com/touch/" => ["Science"]
 }
 
 sites.each do |url, ints|

@@ -11,8 +11,13 @@ class Website < ActiveRecord::Base
   private
 
   def ensure_url_format
+    parse_html unless /^http.?:\/\//.match(self.url )
     parse_youtube if self.url.include?("youtube.com")
     parse_vimeo if self.url.include?("vimeo.com")
+  end
+
+  def parse_html
+    self.url = "http://#{self.url}"
   end
 
   def parse_youtube

@@ -9,7 +9,7 @@ App.Routers.AppRouter = Backbone.Router.extend({
         "interests": "interestsIndex",
         "interests/:id": "interestShow", 
         "sail": "websitePick",
-        "sail/:id": "doNothing",
+        "sail/:id": "websiteShow",
     },
     
     interestsIndex: function () {
@@ -51,17 +51,14 @@ App.Routers.AppRouter = Backbone.Router.extend({
         var site = new App.Models.Website();
         site.fetch({
             success: function () {
-                Backbone.history.navigate("/sail/" + site.get('id'));
-                that.websiteShow(site);
+                Backbone.history.navigate("sail/" + site.get('id'));
             }
         });        
     },
     
-    websiteShow: function (site) {                
+    websiteShow: function (id) { 
+        var site = App.Collections.websites.getOrFetch(id);
         var view = new App.Views.WebsiteShow({model: site});
         this.$rootEl.html(view.render().$el);
     },
-    
-    doNothing: function () {},
-    
 });

@@ -4,6 +4,7 @@ window.App = {
   Views: {},
   Routers: {},
   initialize: function() {
+      App.Collections.websites = new App.Collections.Websites();
       new window.App.Routers.AppRouter({$rootEl: $("#content")});
       Backbone.history.start();
   }
