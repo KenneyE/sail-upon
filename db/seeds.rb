@@ -10,6 +10,39 @@
 User.create(username: "Guest User", password: "password")
 User.create(username: "Eric", password: "foobar")
 
+interests = {
+  "Photograpy" => "See amazing photos and get photography tips and ideas, from Polaroids to digital cameras.",
+  "Science"  => "A lot's happened since your first science fair. Learn about discoveries in space, biology and more.",
+  "Art" => "All of the world's finest arts.",
+  "Skiing" => "Love snow days? From the mountains of Colorado to Vermont, explore downhill and cross country skiing.",
+  "Astronomy" => "No telescope? No problem. Explore astronomy, from the Big Bang to the mission to Mars.",
+  "Movies" => "Always first in line for the best new movies? Explore the magic of Hollywood and the cinema.",
+  "Beer" => "Is Oktoberfest your dream vacation? Learn about breweries, craft beers, kegs, beer gardens and more.",
+  "Cigars" => "Put on your smoking jacket and explore cigars: the best international brands, accessories and more.",
+  "Cars" => "Saving up for a Porsche? Either way, learn about cars, technologies, stunts and more here.",
+  "Cooking" => "",
+  "Food" => "",
+  "Graphic Design" => "From logos to websites, graphic designers have perfected the art of visual communication. Check it out.",
+  "Music" => "Music makes the world go round. Discover new bands, songs, lyrics, music videos and more.",
+  "Camping" => "Love the great outdoors? Explore hiking, camping and adventure sports. And then get out there!",
+  "Trains" => "Was Thomas the Tank Engine your favorite toy? Explore the history of trains, railway modelling and more.",
+  "Video Games" => "",
+  "Fitness" => "",
+  "Books" => "",
+  "Animation" => "",
+  "Architecture" => "",
+  "Photoshop"  => ""}
+
+interests.each do |int, desc|
+  Interest.create(title: int, description: desc)
+end
+
+
+
+  "http://www.archdaily.com/"
+
+"http://www.dezeen.com/"
+"http://www.notcot.org/"
 
 sites = ["https://www.youtube.com/watch?v=I4r729ZMinQ",
 "http://heytherefancypants.com/Photos/CreedmoreLakeNight2.png",
@@ -66,7 +99,6 @@ sites = ["https://www.youtube.com/watch?v=I4r729ZMinQ",
 "blog.assaflavie.com/touch/"]
 
 20.times do |i|
-  Interest.create(name: "Interest#{i}", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse")
   UserInterest.create(user_id: 1, interest_id: i )
   UserInterest.create(user_id: 2, interest_id: i )
 end

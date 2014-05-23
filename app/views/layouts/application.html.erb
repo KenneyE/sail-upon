@@ -10,28 +10,28 @@
 <body>
 
     <script type="application/json" id="current_user_json">
-        { "current_user": <%= current_user.to_json.html_safe %> }
+    { "current_user": <%= current_user.to_json.html_safe %> }
     </script>
 
     <%= render 'shared/navbar' %>
-
-    <% if flash[:errors] %>
-    <div class="notice alert-error">
-        <% flash[:errors].each do |error| %>
-        <%= error %>
+    <div class="container-fluid" id="wrapper">
+        <% if flash[:errors] %>
+        <div class="notice alert-error">
+            <% flash[:errors].each do |error| %>
+            <%= error %>
+            <% end %>
+        </div>
         <% end %>
-    </div>
-    <% end %>
 
-    <% if flash[:notices] %>
-    <div class="notice alert-success">
-        <% flash[:notices].each do |notice| %>
-        <%= notice %>
+        <% if flash[:notices] %>
+        <div class="notice alert-success">
+            <% flash[:notices].each do |notice| %>
+            <%= notice %>
+            <% end %>
+        </div>
         <% end %>
-    </div>
-    <% end %>
 
-    <div class="container-fluid">
+
         <%= yield %>
     </div>
 

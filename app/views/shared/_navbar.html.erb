@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse black">
+<nav class="navbar navbar-inverse navbar-fixed-top black">
     <div class="container-fluid">
       <ul class="nav navbar-nav">
           <% if logged_in? %>
@@ -21,8 +21,17 @@
             <li><a href="#">One more separated link</a></li>
           </ul>
         </li>
-
-        <a class="navbar-brand" id="sail" href="#/sail">Sail</a>
+        <div class="navbar-center nav navbar-nav">
+            <ul class="nav navbar-nav">
+                <li class="thumb thumbs-down"><button class="btn btn-default btn-lg">
+                    <span class="glyphicon glyphicon-thumbs-down"></span>
+                </button></li>
+                <li><a id="sail" href="#/sail">Sail</a></li>
+                <li class="thumb thumbs-up"><button class="btn btn-default btn-lg">
+                        <span class="glyphicon glyphicon-thumbs-up"></span>
+                </button></li>
+            </ul>
+        </div>
         <% else %>
               <li><%= link_to "Sign In", new_session_url %></li>
         <% end %>

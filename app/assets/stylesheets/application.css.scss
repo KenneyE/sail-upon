@@ -16,6 +16,10 @@
 
 body { background: #EDEDED;}
 
+#wrapper {
+    margin-top: 71px;
+}
+
 .black {
     background: #2D2D2D;
 }
@@ -24,24 +28,31 @@ body { background: #EDEDED;}
     border-radius: 0;
 }
 
+.navbar {
+    background: -webkit-linear-gradient(#2F2F2F, #292929);
+    background: -o-linear-gradient(#2F2F2F, #292929);
+    background: -moz-linear-gradient(#2F2F2F, #292929);
+    background: linear-gradient(#2F2F2F, #292929);
+}
+
 .navbar * {
     color: #D1D2D4;
 }
 
 
-
-.navbar-brand {
-    background: #EC5A2D;
-    height: 30px;
-    width: 130px;
+.navbar-center {
     position: absolute;
-    left: 47%;
-    top: 50%;
-    margin-left: -75px;
-    margin-top: -15px;
-    text-align: center;
-    border-radius: 3px;
-    padding-top: 5px;
+    height: 100%;
+    left: 50%;
+    margin-left: -150px;
+    width: 228px;
+    background: #1D1D1D;
+    border-left: 1px #4B4B4B solid;
+    border-right: 1px #4B4B4B solid;
+}
+
+.navbar-center * {
+    height: 100%;
 }
 
 #sail {
@@ -49,7 +60,36 @@ body { background: #EDEDED;}
     font-family: "HelveticaNeueMedium", "HelveticaNeue-Medium",sans-serif;
     font-weight: 500;
     letter-spacing: 1px;
+    text-align: center;
+    border-radius: 3px;
+    padding-top: 5px;
+    height: 30px;
+    width: 115px;
+    background: #EC5A2D;
+    margin-top: 5px;
+    text-shadow: 0px 1px 1px #833219;
 }
+
+#sail:hover {
+    border: 1px solid #EE7C57;
+    background: -webkit-linear-gradient(#FE6B3E, #EC5A2D);
+    background: -o-linear-gradient(#FE6B3E, #EC5A2D);
+    background: -moz-linear-gradient(#FE6B3E, #EC5A2D);
+    background: linear-gradient(#FE6B3E, #EC5A2D);
+}
+.thumb > button{
+    background: #1D1D1D;
+    outline: none;
+    border: none;
+    width: 55px;
+
+}
+
+.thumb > button:hover {
+    background: #1D1D1D;
+    outline: none;
+    border: none;
+};
 
 .website-iframe {
     height: 100%;
