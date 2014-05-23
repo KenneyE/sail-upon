@@ -66,7 +66,7 @@ sites = ["https://www.youtube.com/watch?v=I4r729ZMinQ",
 "blog.assaflavie.com/touch/"]
 
 20.times do |i|
-  Interest.create(name: "Interest#{i}", description: "An interest")
+  Interest.create(name: "Interest#{i}", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse")
   UserInterest.create(user_id: 1, interest_id: i )
   UserInterest.create(user_id: 2, interest_id: i )
 end

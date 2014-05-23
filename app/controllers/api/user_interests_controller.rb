@@ -3,9 +3,6 @@ module Api
     def create
       user_interest = UserInterest.new(user: current_user,
       interest_id: params[:interest_id])
-
-      puts "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!   #{user_interest} !!!!!!!!!!!!!!!!!!!"
-
       user_interest.save!
       render json: "Followed"
 

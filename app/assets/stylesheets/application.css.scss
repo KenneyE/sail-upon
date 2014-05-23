@@ -15,18 +15,20 @@
 @import "bootstrap";
 
 body { background: #EDEDED;}
-#stumble-button {
-    margin: 0 auto;
-}
-
-
-.panel, .navbar {
-    border-radius: 0;
-}
 
 .black {
     background: #2D2D2D;
 }
+
+.panel, .panel *, .navbar {
+    border-radius: 0;
+}
+
+.navbar * {
+    color: #D1D2D4;
+}
+
+
 
 .navbar-brand {
     background: #EC5A2D;
@@ -39,6 +41,7 @@ body { background: #EDEDED;}
     margin-top: -15px;
     text-align: center;
     border-radius: 3px;
+    padding-top: 5px;
 }
 
 #sail {
@@ -63,3 +66,46 @@ body { background: #EDEDED;}
     padding: 0;
     margin: 0;
 }
+
+.panel {
+    padding: 7px;
+}
+.panel-default > .panel-heading {
+    height: 27px;
+    background-color: #AB1333;
+    color: white;
+    padding: 4px;
+    padding-left: 7px;
+}
+
+.panel-body { padding: 0;}
+.panel-body > * {
+    color: white;
+    width: 100%;
+}
+
+.panel-body > .panel-interest-image {
+    min-height: 100px;
+    margin-top: 3px;
+    background-color: #A9A9A9;
+}
+
+.panel-body > .panel-interest-description {
+    color: #6D6E71;
+    background: -webkit-linear-gradient(#FFFFFF, #ECECEC);
+    background: -o-linear-gradient(#FFFFFF, #ECECEC);
+    background: -moz-linear-gradient(#FFFFFF, #ECECEC);
+    background: linear-gradient(#FFFFFF, #ECECEC);
+}
+
+.panel-default > .panel-footer {
+    height: 40px;
+//    background-color: #A9A9A9;
+    padding: 5px;
+
+    background: -webkit-linear-gradient(#BBBDBF, #999999);
+    background: -o-linear-gradient(#BBBDBF, #999999);
+    background: -moz-linear-gradient(#BBBDBF, #999999);
+    background: linear-gradient(#BBBDBF, #999999);
+}
+
