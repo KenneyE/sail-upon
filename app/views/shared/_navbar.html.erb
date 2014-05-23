@@ -1,40 +1,45 @@
 <nav class="navbar navbar-inverse navbar-fixed-top black">
-    <div class="container-fluid">
-      <ul class="nav navbar-nav">
-          <% if logged_in? %>
-            <li class="active">
-                <a href="#/users/<%= current_user.id %>"><span class="glyphicon glyphicon-home"></a>
-            </li>
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <% if logged_in? %>
+      <li class="active">
+        <a href="#/users/<%= current_user.id %>"><span class="glyphicon glyphicon-home"></span></a>
+      </li>
 
-       <li class="dropdown">
-          <a href="#"
-              class="dropdown-toggle"
-              data-toggle="dropdown">
-                  Interests <b class="caret"></b>
-          </a>
-          <ul class="dropdown-menu">
-            <li><a href="#/users/<%= current_user.id %>/interests">Your Interests</a></li>
-            <li><a href="#/interests">Add Interests</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
-        <div class="navbar-center nav navbar-nav">
-            <ul class="nav navbar-nav">
-                <li class="thumb thumbs-down"><button class="btn btn-default btn-lg">
-                    <span class="glyphicon glyphicon-thumbs-down"></span>
-                </button></li>
-                <li><a id="sail" href="#/sail">Sail</a></li>
-                <li class="thumb thumbs-up"><button class="btn btn-default btn-lg">
-                        <span class="glyphicon glyphicon-thumbs-up"></span>
-                </button></li>
-            </ul>
-        </div>
+
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          Interests <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="#/users/<%= current_user.id %>/interests">Your Interests</a></li>
+          <li><a href="#/interests">Add Interests</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+          <li class="divider"></li>
+          <li><a href="#">One more separated link</a></li>
+        </ul>
+      </li>
+      <div class="navbar-center nav navbar-nav">
+        <ul class="nav navbar-nav">
+          <li class="thumb thumbs-down"><button class="btn btn-default btn-lg">
+            <span class="glyphicon glyphicon-thumbs-down"></span>
+          </button></li>
+          <li><a id="sail" href="#/sail">Sail</a></li>
+          <li class="thumb thumbs-up"><button class="btn btn-default btn-lg">
+            <span class="glyphicon glyphicon-thumbs-up"></span>
+          </button></li>
+        </ul>
+      </div>
+      <ul class="nav navbar-right">
+        <li><%= button_to "Sign Out", session_url, method: :delete , class: "btn-link"%></li>
         <% else %>
-              <li><%= link_to "Sign In", new_session_url %></li>
+        <li class="active">
+          <a href="<%= new_session_url %>"><span class="glyphicon glyphicon-home"></span></a>
+        </li>
+        <li><%= button_to "Sign In", new_session_url , method: :get ,class: "btn-link"%></li>
         <% end %>
       </ul>
-    </div>
+    </ul>
+  </div>
 </nav>

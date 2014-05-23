@@ -8,6 +8,10 @@ module SessionsHelper
     redirect_to new_session_url unless logged_in?
   end
 
+  def ensure_logged_out
+    redirect_to "#/users/#{current_user.id}" if logged_in?
+  end
+
   def login!(user)
     session[:session_token] = user.reset_session_token!
   end

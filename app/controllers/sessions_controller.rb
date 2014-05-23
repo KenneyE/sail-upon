@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-
+  before_action :ensure_logged_out, only: [:new]
   def create
     username = params[:user][:username]
     password = params[:user][:password]
@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     if @user
       flash[:notices] = ["Welcome, #{@user.username}!"]
       login!(@user)
-      redirect_to root_url
+      redirect_to "#/users/#{@user.id}"
     else
       flash[:errors] = ["Incorrect username and/or password"]
       render :new
