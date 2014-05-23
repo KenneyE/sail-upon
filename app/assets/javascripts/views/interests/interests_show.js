@@ -16,9 +16,9 @@ window.App.Views.InterestShow = Backbone.View.extend ({
             view.is_interested = (_.find(interests.models, function (interest) {
                 return interest.id === view.model.id;
             }));
-            view.render()
+            view.render();
         }
-    })},
+    });},
 
     events: {
         "click .follow-btn": "toggleFollow", 
@@ -37,18 +37,14 @@ window.App.Views.InterestShow = Backbone.View.extend ({
 
     toggleFollow: function (event) {
         var view = this;
-        $(event.target.parentElement).find(".follow-btn").toggleClass("hidden");
         if (view.is_interested) {
-            debugger
+            view.model.unfollow();
             view.current_user.interests().remove(view.model);
-            view.current_user.save();
-            // view.current_user.interests().sync("post",
-            //          view.current_user.interests() );
         } else {
-            debugger
+            view.model.follow();
             view.current_user.interests().add(view.model); 
         }
-
+        $(event.target.parentElement).find(".follow-btn").toggleClass("hidden");
     },
 
 });

@@ -13,5 +13,8 @@ App::Application.routes.draw do
     get '/websites', to: 'websites#show'
     # get '/user', to: 'users#show_current'
     get '/interests', to: 'interests#full_index'
+
+    post '/user_interests/:interest_id', to: 'user_interests#create'
+    delete '/user_interests/:interest_id', to: 'user_interests#destroy'
   end
 end
