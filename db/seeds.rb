@@ -11,7 +11,6 @@ User.create(username: "Guest User", password: "password")
 User.create(username: "Eric", password: "foobar")
 
 
-
 sites = ["https://www.youtube.com/watch?v=I4r729ZMinQ",
 "http://heytherefancypants.com/Photos/CreedmoreLakeNight2.png",
 "http://heytherefancypants.com/Photos/FlatironsFromPlane_2.jpg",
@@ -63,7 +62,8 @@ sites = ["https://www.youtube.com/watch?v=I4r729ZMinQ",
 "http://www.io9.com/5893615/absolutely-mindblowing-video-shot-from-the-space-shuttle-during-launch/",
 "www.gtspirit.com/wp-content/gallery/pagani-huayra-road-test-1/21.jpg/",
 "http://www.youtube.com/watch?v=yn3FWb-vQQ4",
-"http://aeon.co/magazine/living-together/james-somers-web-developer-money/"]
+"http://aeon.co/magazine/living-together/james-somers-web-developer-money/",
+"blog.assaflavie.com/touch/"]
 
 20.times do |i|
   Interest.create(name: "Interest#{i}", description: "An interest")

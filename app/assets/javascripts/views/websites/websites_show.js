@@ -1,6 +1,5 @@
 window.App.Views.WebsiteShow = Backbone.View.extend ({
     initialize: function () {
-        this.fetchSite();
         this.listenTo(this.model, "change", this.render);
     },
     
@@ -9,18 +8,9 @@ window.App.Views.WebsiteShow = Backbone.View.extend ({
             this.el.src = this.model.get('url');
         }
         var content = this.template({website: this.model});
+        
         this.$el.html(content);
         return this;
-    },
-    
-    events: {
-        "click .sail": "fetchSite",
-    },
-    
-    fetchSite: function () {
-        var site = new App.Models.Website();
-        site.fetch();
-        this.model = site;
     },
     
     tagName: "iframe",

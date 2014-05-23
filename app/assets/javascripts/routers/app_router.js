@@ -1,6 +1,7 @@
 App.Routers.AppRouter = Backbone.Router.extend({
     initialize: function (options) {
         this.$rootEl = options.$rootEl;
+        // $("#sail").on('click', websitePick);
     },
     
     routes: {
@@ -8,7 +9,8 @@ App.Routers.AppRouter = Backbone.Router.extend({
         "users/:user_id/interests": "userInterestsIndex",
         "interests": "interestsIndex",
         "interests/:id": "interestShow", 
-        "sail": "websiteShow",
+        "sail": "websitePick",
+        "sail/:id": "doNothing",
     },
     
     interestsIndex: function () {
@@ -45,9 +47,27 @@ App.Routers.AppRouter = Backbone.Router.extend({
         this.$rootEl.html(view.render().$el);
     },
     
-    websiteShow: function () {
-
-        var view = new App.Views.WebsiteShow();
+    websitePick: function () {
+        var that = this;
+        var site = new App.Models.Website();
+        // debugger;
+        site.fetch({
+            success: function () {
+                debugger
+                Backbone.history.navigate("/sail/" + site.get('id'));
+                that.websiteShow(site);
+                
+            }
+        });
+        // Backbone.history.navigate("")
+        
+    },
+    
+    websiteShow: function (site) {                
+        var view = new App.Views.WebsiteShow({model: site});
         this.$rootEl.html(view.render().$el);
-    }
+    },
+    
+    doNothing: function () {},
+    
 });

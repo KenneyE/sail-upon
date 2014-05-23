@@ -18,8 +18,19 @@
     margin: 0 auto;
 }
 
-.panel {
+
+.panel, .navbar{
     border-radius: 0;
+}
+
+.navbar-brand
+{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin: 0 auto;
+    outline: 1px solid red;
 }
 
 .website-iframe {
