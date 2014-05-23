@@ -50,17 +50,12 @@ App.Routers.AppRouter = Backbone.Router.extend({
     websitePick: function () {
         var that = this;
         var site = new App.Models.Website();
-        // debugger;
         site.fetch({
             success: function () {
-                debugger
                 Backbone.history.navigate("/sail/" + site.get('id'));
                 that.websiteShow(site);
-                
             }
-        });
-        // Backbone.history.navigate("")
-        
+        });        
     },
     
     websiteShow: function (site) {                
