@@ -1,6 +1,6 @@
 window.App.Views.WebsiteShow = Backbone.View.extend ({
     initialize: function () {
-        this.listenTo(this.model, "change", this.render);
+        this.listenTo(this.model, "sync", this.render);
     },
     
     render: function () {

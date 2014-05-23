@@ -51,12 +51,14 @@ App.Routers.AppRouter = Backbone.Router.extend({
         var site = new App.Models.Website();
         site.fetch({
             success: function () {
-                Backbone.history.navigate("sail/" + site.get('id'));
+                Backbone.history.navigate("sail/" + site.get('id'), 
+                                            {trigger: true}
+                                         );
             }
         });        
     },
     
-    websiteShow: function (id) { 
+    websiteShow: function (id) {
         var site = App.Collections.websites.getOrFetch(id);
         var view = new App.Views.WebsiteShow({model: site});
         this.$rootEl.html(view.render().$el);
