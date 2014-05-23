@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse black">
     <div class="container-fluid">
       <ul class="nav navbar-nav">
           <% if logged_in? %>
@@ -22,7 +22,7 @@
           </ul>
         </li>
 
-        <!-- <a class="navbar-brand" href="#/sail">Sail</a> -->
+        <a class="navbar-brand" id="sail" href="#/sail">Sail</a>
         <% else %>
               <li><%= link_to "Sign In", new_session_url %></li>
         <% end %>
