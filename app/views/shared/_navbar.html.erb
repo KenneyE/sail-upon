@@ -21,16 +21,21 @@
       </li>
       <div class="navbar-center nav navbar-nav">
         <ul class="nav navbar-nav">
+
           <li class="thumb thumbs-down">
-            <button class="btn btn-default btn-lg">
+            <form action="#" method="post" class="downvote-form">
+            <button class="btn btn-default btn-lg vote-btn">
               <span class="glyphicon glyphicon-thumbs-down"></span>
             </button>
+            </form>
           </li>
           <li><%= button_to "Sail", "#/sail" , method: :get,  class: "sail-btn sail-style-btn" %></li>
           <li class="thumb thumbs-up">
-            <button class="btn btn-default btn-lg">
+            <form action="#" method="post" class="upvote-form">
+            <button class="btn btn-default btn-lg vote-btn">
               <span class="glyphicon glyphicon-thumbs-up"></span>
             </button>
+          </form>
           </li>
         </ul>
       </div>

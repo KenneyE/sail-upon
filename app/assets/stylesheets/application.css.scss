@@ -87,7 +87,7 @@ $navbar-height: 30px;
     background: linear-gradient(#FE6B3E, #EC5A2D);
 }
 
-.thumb > button{
+.vote-btn {
     background: #1D1D1D;
     outline: none;
     border: none;
@@ -95,7 +95,7 @@ $navbar-height: 30px;
 
 }
 
-.thumb > button:hover {
+.vote-btn:hover {
     background: #1D1D1D;
     outline: none;
     border: none;

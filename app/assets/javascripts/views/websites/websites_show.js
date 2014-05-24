@@ -10,6 +10,8 @@ window.App.Views.WebsiteShow = Backbone.View.extend ({
         var content = this.template({website: this.model});
         
         this.$el.html(content);
+        this.replaceVoteLinks(this.model.id);
+        
         return this;
     },
     
@@ -20,5 +22,11 @@ window.App.Views.WebsiteShow = Backbone.View.extend ({
     className: "website-iframe col-xs-12",
     
     template: JST["websites/show"],
+    
+    replaceVoteLinks: function(id) {
+        var actionText = "/api/websites/" + id + "/vote/";
+        $('.upvote-form').attr('action', actionText + "1" );
+        $('.downvote-form').attr('action', actionText + "0" );
+    },
     
 });

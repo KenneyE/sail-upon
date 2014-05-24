@@ -8,13 +8,12 @@ App::Application.routes.draw do
     resources :users, only: [:edit, :index, :show] do
       resources :interests, shallow: true
     end
-
-    # resources :websites
     get '/websites', to: 'websites#show'
-    # get '/user', to: 'users#show_current'
+    post '/websites/:website_id/vote/:vote_key', to: 'votes#vote'
     get '/interests', to: 'interests#full_index'
 
     post '/user_interests/:interest_id', to: 'user_interests#create'
     delete '/user_interests/:interest_id', to: 'user_interests#destroy'
+
   end
 end
