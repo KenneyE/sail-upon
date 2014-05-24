@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse navbar-fixed-top black">
+<nav class="navbar navbar-inverse navbar-fixed-top black" id="navbar">
   <div class="container-fluid">
     <ul class="nav navbar-nav">
       <% if logged_in? %>
@@ -12,10 +12,9 @@
           Interests <b class="caret"></b>
         </a>
         <ul class="dropdown-menu">
-          <li><a href="#/users/<%= current_user.id %>/interests">Your Interests</a></li>
+          <li><a href="#/users/<%= current_user.id %>">Your Interests</a></li>
           <li><a href="#/interests">Add Interests</a></li>
-          <li class="divider"></li>
-          <li><a href="#">Separated link</a></li>
+          <li><a href="#/interests">Propose New Interest</a></li>
           <li class="divider"></li>
           <li><a href="#">One more separated link</a></li>
         </ul>

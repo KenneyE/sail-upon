@@ -18,6 +18,15 @@ window.App.Views.UserShow = Backbone.CompositeView.extend ({
         interestShowView.render();
     },
     
+    removeInterest: function (interest) {
+        var interestShowView = 
+        _(this.subviews()[".interests"]).find (function (subview) {
+            return subview.model == interest;
+        });
+       
+        this.removeSubview(".interests", interestShowView);
+    },
+    
     render: function () {
         var view = this;
         var content = this.template({user: this.model});

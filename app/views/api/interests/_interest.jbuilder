@@ -1,1 +1,1 @@
-json.extract! interest, :id, :name, :description
+json.extract! interest, :id, :name, :description, :color

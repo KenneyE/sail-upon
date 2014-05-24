@@ -5,7 +5,7 @@ App.Routers.AppRouter = Backbone.Router.extend({
     
     routes: {
         "users/:id": "userShow",
-        "users/:user_id/interests": "userInterestsIndex",
+        // "users/:user_id/interests": "userInterestsIndex",
         "interests": "interestsIndex",
         "interests/:id": "interestShow", 
         "sail": "websitePick",

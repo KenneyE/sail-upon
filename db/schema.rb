@@ -11,16 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140522184042) do
+ActiveRecord::Schema.define(version: 20140524000039) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "interests", force: true do |t|
-    t.string   "name",        null: false
+    t.string   "name",                              null: false
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "color",       default: "dark-blue", null: false
   end
 
   add_index "interests", ["name"], name: "index_interests_on_name", unique: true, using: :btree
@@ -46,6 +47,18 @@ ActiveRecord::Schema.define(version: 20140522184042) do
 
   add_index "users", ["session_token"], name: "index_users_on_session_token", unique: true, using: :btree
   add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
+
+  create_table "votes", force: true do |t|
+    t.integer  "user_id",    null: false
+    t.integer  "website_id", null: false
+    t.boolean  "upvote",     null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "votes", ["user_id", "website_id"], name: "index_votes_on_user_id_and_website_id", unique: true, using: :btree
+  add_index "votes", ["user_id"], name: "index_votes_on_user_id", using: :btree
+  add_index "votes", ["website_id"], name: "index_votes_on_website_id", using: :btree
 
   create_table "website_interests", force: true do |t|
     t.integer  "website_id",  null: false

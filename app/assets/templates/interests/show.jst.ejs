@@ -1,9 +1,9 @@
 <div class="panel panel-default interest-panel">
-    <div class="panel-heading interest-panel-heading">
+    <div class="panel-heading interest-panel-heading <%= interest.escape("color") %>">
         <h3 class="panel-title"><%= interest.escape("name") %></h3>
     </div>
     <div class="panel-body interest-panel-body">
-        <div class="interest-panel-image">Photo Here</div>
+        <div class="interest-panel-image <%= interest.escape("color") %>">Photo Here</div>
         <div class="interest-panel-description">
             <%= interest.escape("description") %>
         </div>
@@ -11,11 +11,20 @@
 
     <div class="panel-footer interst-panel-footer">
         <% if(interested) { %>
-            <button class="btn btn-sm follow-btn" data-id="<%= interest.id %>">Unfollow</button>
-            <button class="btn btn-sm follow-btn hidden" data-id="<%= interest.id %>">Follow</button>
+
+            <button class="btn btn-sm follow-btn" data-id="<%= interest.id %>">
+              <span class="glyphicon glyphicon-check"></span>Following
+            </button>
+            <button class="btn btn-sm follow-btn hidden" data-id="<%= interest.id %>">
+              <span class="glyphicon glyphicon-unchecked"></span>Follow
+            </button>
         <% } else { %>
-            <button class="btn btn-sm follow-btn hidden" data-id="<%= interest.id %>">Unfollow</button>
-            <button class="btn btn-sm follow-btn" data-id="<%= interest.id %>">Follow</button>
+            <button class="btn btn-sm follow-btn hidden" data-id="<%= interest.id %>">
+              <span class="glyphicon glyphicon-check"></span>Following
+            </button>
+            <button class="btn btn-sm follow-btn" data-id="<%= interest.id %>">
+              <span class="glyphicon glyphicon-unchecked"></span>Follow
+            </button>
         <% } %>
     </div>
 </div>

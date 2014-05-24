@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
   has_many :interests, through: :user_interests
 
   has_many :submitted_sites, class_name: "Website", foreign_key: :submitter_id
+  has_many :votes
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)

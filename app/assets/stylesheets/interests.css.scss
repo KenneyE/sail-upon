@@ -1,0 +1,71 @@
+// Place all the styles related to the UserInterests controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.panel-heading.dark-blue, .interest-panel-image.dark-blue  {background: #0070AA;}
+.panel-heading.light-blue, .interest-panel-image.light-blue  {background: #0096D6;}
+.panel-heading.orange , .interest-panel-image.orange  {background: #EE6633;}
+.panel-heading.yellow, .interest-panel-image.yellow  {background: #E99911;}
+.panel-heading.purple, .interest-panel-image.purple  {background: #5D5AAA;}
+.panel-heading.dark-red, .interest-panel-image.dark-red  {background: #AB1333;}
+.panel-heading.light-green, .interest-panel-image.light-green  {background: #AB1333;}
+.panel-heading.dark-green , .interest-panel-image.dark-green  {background: #006F6F;}
+.panel-heading.pink, .interest-panel-image.pink  {background: #C95999;}
+
+.panel.interest-panel{
+    padding: 7px;
+}
+.panel-heading.interest-panel-heading {
+    height: 27px;
+    color: white;
+    padding: 4px;
+    padding-left: 7px;
+}
+
+.panel-body.interest-panel-body { padding: 0;}
+.panel-body.interest-panel-body > * {
+    color: white;
+    width: 100%;
+}
+
+.panel-body.interest-panel-body > .interest-panel-image {
+    min-height: 100px;
+    margin-top: 3px;
+    padding-bottom: 2px;
+}
+
+.panel-body.interest-panel-body > .interest-panel-description {
+    color: #6D6E71;
+    background: -webkit-linear-gradient(#FFFFFF, #ECECEC);
+    background: -o-linear-gradient(#FFFFFF, #ECECEC);
+    background: -moz-linear-gradient(#FFFFFF, #ECECEC);
+    background: linear-gradient(#FFFFFF, #ECECEC);
+}
+
+.panel-default > .panel-footer.interst-panel-footer {
+    height: 40px;
+//    background-color: #A9A9A9;
+    padding: 9px;
+    margin-top: 1px;
+    background: -webkit-linear-gradient(#BBBDBF, #999999);
+    background: -o-linear-gradient(#BBBDBF, #999999);
+    background: -moz-linear-gradient(#BBBDBF, #999999);
+    background: linear-gradient(#BBBDBF, #999999);
+}
+
+
+.panel-footer .follow-btn {
+    border-radius: 10px;
+    height: 20px;
+    min-width: 83px;
+    line-height: 1.6;
+    background: #6E7073;
+    border: 1px solid #939597;
+    color: white;
+    padding: 0 8px;
+}
+
+.panel-footer .follow-btn:hover {
+    background: #4C5051;
+}

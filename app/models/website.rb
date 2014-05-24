@@ -8,6 +8,23 @@ class Website < ActiveRecord::Base
   has_many :website_interests
   has_many :interests, through: :website_interests
 
+  has_many :votes
+
+
+
+  def count_votes
+    count = 0
+
+    self.votes.each do |vote|
+      if vote.upvote
+        count += 1
+      else
+        count -= 1
+      end
+    end
+    count
+  end
+
   private
 
   def ensure_url_format
@@ -31,4 +48,9 @@ class Website < ActiveRecord::Base
     video_id = self.url.match(regex)
     self.url = "//player.vimeo.com/video/#{video_id}"
   end
+
+  # def get_title
+  #   doc = Nokogiri::HTML(open(self.url))
+  #   self.title = doc.css('title').first
+  # end
 end
