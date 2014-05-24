@@ -24,6 +24,7 @@
 
           <li class="thumb thumbs-down">
             <form action="#" method="post" class="downvote-form">
+              <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
             <button class="btn btn-default btn-lg vote-btn">
               <span class="glyphicon glyphicon-thumbs-down"></span>
             </button>
@@ -32,6 +33,8 @@
           <li><%= button_to "Sail", "#/sail" , method: :get,  class: "sail-btn sail-style-btn" %></li>
           <li class="thumb thumbs-up">
             <form action="#" method="post" class="upvote-form">
+              <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
             <button class="btn btn-default btn-lg vote-btn">
               <span class="glyphicon glyphicon-thumbs-up"></span>
             </button>

@@ -10,6 +10,7 @@ window.App.Views.WebsiteShow = Backbone.View.extend ({
         var content = this.template({website: this.model});
         
         this.$el.html(content);
+        debugger
         this.replaceVoteLinks(this.model.id);
         
         return this;

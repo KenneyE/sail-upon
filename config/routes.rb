@@ -14,6 +14,5 @@ App::Application.routes.draw do
 
     post '/user_interests/:interest_id', to: 'user_interests#create'
     delete '/user_interests/:interest_id', to: 'user_interests#destroy'
-
   end
 end

@@ -9,7 +9,7 @@ module Api
 
     def index
       @interests = User.find(params[:user_id]).interests
-      render :index, jlocals: { interest: @interests }
+      render :index, locals: { interest: @interests }
     end
 
     def full_index
@@ -21,6 +21,5 @@ module Api
       @interest = Interest.find(params[:id])
       render partial: "api/interests/interest", locals: { interest: @interest }
     end
-
   end
 end
