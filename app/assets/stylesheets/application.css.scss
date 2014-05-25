@@ -16,12 +16,19 @@
 body { background: #EDEDED;}
 $navbar-height: 30px;
 
-.container-sign-up {background-image:url('images/BFiesta1.jpg');}
+div.home-image {
+    background-image: url('/BFiesta1.jpg');
+    background-size: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+}
+
 #wrapper { margin-top: 71px; }
 .black { background: #2D2D2D; }
 .panel, .panel *, .navbar { border-radius: 0; }
 .btn-lg { height: 50px;}
-.body-header { margin: auto; position: relative;}
+.body-header { text-align: center;}
 
 .navbar.top-nav {
     background: -webkit-linear-gradient(#2F2F2F, #292929);

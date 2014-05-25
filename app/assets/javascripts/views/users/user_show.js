@@ -34,5 +34,4 @@ window.App.Views.UserShow = Backbone.CompositeView.extend ({
         this.renderSubviews();
         return this;
     },
-     
 });

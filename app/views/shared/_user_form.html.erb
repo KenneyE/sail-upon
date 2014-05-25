@@ -28,8 +28,23 @@
             <input type="submit" value="Set Sail..." class=" btn sail-style-btn">
         </form>
         <br><br>
-        <button class="btn sail-style-btn sail-style-btn-lg">Sail as a guest</button>
+        <% if sign_up %>
+        <%= button_to "Already a user?", new_session_url, method: :get, class: "btn sail-style-btn sail-style-btn-lg" %>
+          <!-- <a href="<%= new_session_url %>"><button class="btn sail-style-btn sail-style-btn-lg" href="">
+            Already a user?
+          </button></a> -->
+        <% else %>
+          <button class="btn sail-style-btn sail-style-btn-lg" id="guest-btn">
+            Sail as a guest
+          </button>
+        <% end %>
       </div>
-
     </div>
 </div>
+
+<script>
+$('#guest-btn').on('click', function () {
+  $('#user-username').val('Guest User');
+  $('#user-password').val('guestpassword');
+})
+</script>

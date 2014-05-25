@@ -51,6 +51,7 @@ App.Routers.AppRouter = Backbone.Router.extend({
         var site = new App.Models.Website();
         site.fetch({
             success: function () {
+                App.Collections.websites.add(site);
                 Backbone.history.navigate("sail/" + site.get('id'), 
                                             {trigger: true}
                                          );

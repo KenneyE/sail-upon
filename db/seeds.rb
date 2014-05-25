@@ -7,11 +7,11 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-guest = User.create(username: "Guest User", password: "password")
+guest = User.create(username: "Guest User", password: "guestpassword")
 eric = User.create(username: "Eric", password: "foobar")
 
 interests = {
-  "Photograpy" => "See amazing photos and get photography tips and ideas, from Polaroids to digital cameras.",
+  "Photography" => "See amazing photos and get photography tips and ideas, from Polaroids to digital cameras.",
 
   "Science"  => "A lot's happened since your first science fair. Learn about discoveries in space, biology and more.",
 

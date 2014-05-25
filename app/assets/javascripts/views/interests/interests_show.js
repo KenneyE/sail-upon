@@ -1,6 +1,6 @@
 window.App.Views.InterestShow = Backbone.View.extend ({
 
-    className: "col-xs-2",
+    // className: "col-xs-2",
 
     initialize: function (options) {
         var view = this;
@@ -27,9 +27,10 @@ window.App.Views.InterestShow = Backbone.View.extend ({
     render: function () {
         var content = this.template({ interest: this.model, 
                                       interested: this.is_interested});
-          var src = "/assets/images/interests/" + 
-                      this.model.get("name") + 
-                      ".jpg";
+        var img_name = this.model.get("name").replace(" ", "_");
+        var src = "interests/" + 
+                    img_name + 
+                    ".jpg";
         this.$el.data(String(this.model.id));
         this.$el.html(content);
         this.$el.find(".interest-panel-image > img").attr("src", src)

@@ -2,7 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 .panel-heading.dark-blue, .interest-panel-image.dark-blue  {background: #0070AA;}
 .panel-heading.light-blue, .interest-panel-image.light-blue  {background: #0096D6;}
 .panel-heading.orange , .interest-panel-image.orange  {background: #EE6633;}
@@ -15,6 +14,9 @@
 
 .panel.interest-panel{
     padding: 7px;
+    width: 246px;
+    float: left;
+    margin: 15px;
 }
 
 .panel-heading.interest-panel-heading {
@@ -33,7 +35,8 @@
 .panel-body.interest-panel-body > .interest-panel-image {
     min-height: 100px;
     margin-top: 3px;
-    padding-bottom: 2px;
+    padding-bottom: 5px;
+    background-size: 100%;
 }
 
 .panel-body.interest-panel-body > .interest-panel-description {

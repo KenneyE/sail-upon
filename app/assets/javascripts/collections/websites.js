@@ -3,10 +3,9 @@ window.App.Collections.Websites = Backbone.Collection.extend ({
     
     getOrFetch: function (id) {
         var websites = this;
- 
         var website;
         if (website = this.get(id)) {
-            website.fetch();
+            // website.fetch();
         } else {
             website = new App.Models.Website({ id: id });
             website.fetch({

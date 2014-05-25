@@ -1,17 +1,15 @@
 window.App.Views.WebsiteShow = Backbone.View.extend ({
     initialize: function () {
-        this.listenTo(this.model, "sync", this.render);
+        this.listenTo(this.model, "add", this.render);
     },
     
     render: function () {
         if (this.model.get('url') ) {
             this.el.src = this.model.get('url');
+            this.replaceVoteLinks(this.model.id);
         }
-        var content = this.template({website: this.model});
-        
-        this.$el.html(content);
-        debugger
-        this.replaceVoteLinks(this.model.id);
+        // var content = this.template({website: this.model});
+        // this.$el.html(content);
         
         return this;
     },
