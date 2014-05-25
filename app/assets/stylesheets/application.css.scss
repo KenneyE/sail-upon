@@ -16,23 +16,26 @@
 body { background: #EDEDED;}
 $navbar-height: 30px;
 
-#wrapper {
-    margin-top: 71px;
-}
+.container-sign-up {background-image:url('images/BFiesta1.jpg');}
+#wrapper { margin-top: 71px; }
+.black { background: #2D2D2D; }
+.panel, .panel *, .navbar { border-radius: 0; }
+.btn-lg { height: 50px;}
+.body-header { margin: auto; position: relative;}
 
-.black {
-    background: #2D2D2D;
-}
-
-.panel, .panel *, .navbar {
-    border-radius: 0;
-}
-
-.navbar {
+.navbar.top-nav {
     background: -webkit-linear-gradient(#2F2F2F, #292929);
     background: -o-linear-gradient(#2F2F2F, #292929);
     background: -moz-linear-gradient(#2F2F2F, #292929);
     background: linear-gradient(#2F2F2F, #292929);
+}
+
+.navbar.navbar-2 {background: white; box-shadow: inset 0px 4px 9px -6px;}
+.nav-justified {margin: 5px auto;}
+.navbar.navbar-2 .navbar-nav li {
+    width: 150px;
+    height: 40px;
+    border-left: 1px #dadada solid;
 }
 
 .navbar * { color: #D1D2D4;}
@@ -43,13 +46,17 @@ $navbar-height: 30px;
     left: 50%;
     margin-left: -150px;
     width: 228px;
-    background: #1D1D1D;
-    border-left: 1px #4B4B4B solid;
-    border-right: 1px #4B4B4B solid;
+
 }
 
 .navbar-center * {
     height: 100%;
+}
+
+.navbar-section {
+    background: #1D1D1D;
+    border-left: 1px #4B4B4B solid;
+    border-right: 1px #4B4B4B solid;
 }
 
 .sail-style-btn {
@@ -61,7 +68,7 @@ $navbar-height: 30px;
     text-align: center;
     border-radius: 3px;
     padding-top: 5px;
-    height: 30px;
+    height: 40px;
     width: 115px;
     background: #EC5A2D;
     margin-top: 5px;

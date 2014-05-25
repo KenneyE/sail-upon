@@ -11,7 +11,7 @@ module Api
                         upvote: upvote)
         vote.save
       end
-      render json: vote
+      render json: "Voted"
     end
 
     # private

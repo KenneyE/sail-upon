@@ -26,11 +26,14 @@ window.App.Views.InterestShow = Backbone.View.extend ({
 
     render: function () {
         var content = this.template({ interest: this.model, 
-            interested: this.is_interested});
-                                  
-            this.$el.data(String(this.model.id));
-            this.$el.html(content);
-            return this;
+                                      interested: this.is_interested});
+          var src = "/assets/images/interests/" + 
+                      this.model.get("name") + 
+                      ".jpg";
+        this.$el.data(String(this.model.id));
+        this.$el.html(content);
+        this.$el.find(".interest-panel-image > img").attr("src", src)
+        return this;
     },
 
     template: JST["interests/show"],
