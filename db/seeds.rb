@@ -65,11 +65,11 @@ interests = {
 interest_count = 0
 interests.each do |int, desc|
   interest = Interest.create(name: int, description: desc)
-  if (interest_count % 3).zero?
+  unless (interest_count % 4).zero?
     UserInterest.create(interest_id: interest.id, user_id: guest.id)
   end
 
-  if (interest_count % 4).zero?
+  unless (interest_count % 3).zero?
     UserInterest.create(interest_id: interest.id, user_id: eric.id)
   end
   interest_count += 1
