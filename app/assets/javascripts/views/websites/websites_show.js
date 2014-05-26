@@ -14,6 +14,11 @@ window.App.Views.WebsiteShow = Backbone.View.extend ({
         return this;
     },
     
+    events: {
+        "click .thumbs-down": "downvote",
+        "click .thumbs-up": "upvote",
+    },
+    
     tagName: "iframe",
     
     attributes: {"frameBorder": "0"},
@@ -24,8 +29,7 @@ window.App.Views.WebsiteShow = Backbone.View.extend ({
     
     replaceVoteLinks: function(id) {
         var actionText = "/api/websites/" + id + "/vote/";
-        $('.upvote-form').attr('action', actionText + "1" );
-        $('.downvote-form').attr('action', actionText + "0" );
+        $('.thumbs-up').attr('data-id', id );
+        $('.thumbs-down').attr('data-id', id );
     },
-    
 });

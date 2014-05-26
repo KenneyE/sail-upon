@@ -76,7 +76,7 @@ interests.each do |int, desc|
 end
 
 sites = {
-  "http://www.archdaily.com/" => ["Architecture"] ,
+"http://www.archdaily.com/" => ["Architecture"] ,
 "http://www.dezeen.com/" => ["Architecture", "Art", "Photograpy"] ,
 "http://www.notcot.org/" => ["Architecture", "Art"] ,
 "https://www.youtube.com/watch?v=I4r729ZMinQ" => ["Travel", "Photography"] ,
@@ -121,7 +121,6 @@ sites = {
 "https://vimeo.com/26694098" => ["Extreme Sports"] ,
 "https://vimeo.com/48153500" => ["Music"] ,
 "https://vimeo.com/57634244" => ["Extreme Sports"] ,
-"http://vimeo.com/user2667979/borddemer1" => ["Animation", "Movies"] ,
 "http://livingwood.org/" => ["Art", "Making Things"] ,
 "https://vimeo.com/95252357" => ["Making Things", "Movies"] ,
 "http://www.musictonic.com" => ["Music"] ,
@@ -139,9 +138,7 @@ sites = {
 "http://www.imgur.com/a/rNPff?gallery/" => ["Movies", "Art", "Graphic Design"],
 "www.panoramas.dk/mars/mars-greeleyhaven2/tour.swf/" => ["Astronomy", "Science"],
 "www.kitchendaily.com/read/best-burgers-us?ncid=dynaldusaolp00000175/" => ["Cooking"],
-"www.psykopaint.com/painter.html/" => ["Photography", "Art", "Photoshop", "Animation" ],
 "www.neave.com/strobe/" => ["Graphic Design", "Art"],
-"http://pdl.vimeocdn.com/50060/622/240516411.mp4?token2=1400980890_6dd6edd6d371612426ef6ef662903d5a&aksessionid=da4361ee5d8d295f" => ["Music"],
 "www.randyscottslavin.com/data/photos/93_1slavin_photography_8108.jpg/" => ["Photography"]
 }
 
