@@ -6,7 +6,9 @@
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h4 class="modal-title" id="myModalLabel">Submit a New Site</h4>
             </div>
+
             <div class="modal-body">
+              <form id="new-website">
                 <div class="form-group">
                     <label for="website-url">URL</label>
                     <input type="text"
@@ -24,6 +26,7 @@
                         id="website-interest"
                         placeholder="Enter Related Interest">
                 </div>
+              </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">
@@ -36,3 +39,15 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+var bootstrapped_ints =
+JSON.parse($("#current_user_json").html()).interests;
+
+var interests = []
+for (int in bootstrapped_ints) {
+  interests.push(bootstrapped_ints[int].name);
+}
+
+$("#website-interest").autocomplete({source: interests, appendTo: "#new-website"})
+</script>

@@ -17,7 +17,7 @@ interests = {
 
   "Art" => "All of the world's finest arts.",
 
-  "Skiing" => "Love snow days? From the mountains of Colorado to Vermont, explore downhill and cross country skiing.",
+  "Skiing" => "Love sending it to the moon on a blower day? You like shuttin' 'er down with one big McConkey turn? Love blue bird days with all time pow? Love shredding gnar on a...",
 
   "Astronomy" => "No telescope? No problem. Explore astronomy, from the Big Bang to the mission to Mars.",
 
@@ -35,9 +35,9 @@ interests = {
 
   "Music" => "Music makes the world go round. Discover new bands, songs, lyrics, music videos and more.",
 
-  "Camping" => "Love the great outdoors? Explore hiking, camping and adventure sports. And then get out there!",
+  "Camping" => "Like the idea of being homeless, but only for a couple days? Then get out there with $3000 worth of gear.",
 
-  "Trains" => "Was Thomas the Tank Engine your favorite toy? Explore the history of trains, railway modelling and more.",
+  "Trains" => "Trains are way underrated. Those things are so awesome. Why don't more people think they're awesome?",
 
   "Video Games" => "So you love no-scoping newbs and crushing Code Red? Love it when a 13 year old calls you a punk bitch? Then come pwn some websites about it.",
 
@@ -53,13 +53,19 @@ interests = {
 
   "Airplanes" => "If you don't like airplanes, then I don't want to know you.",
 
-  "Extreme Sports" => "Love shredding gnar and chasing swells?",
+  "Extreme Sports" => "Have ice water running through your veins? Can't get it up unless your on the brink? Are you sick of these rhetorical questions?",
 
   "Photoshop"  => "Bad at taking pictures but want to make people think you're good at it? Too cool for instagram? Perfect recipe for a Photoshop master.",
 
   "Generally Awesome" => "I don't know how to categorize this stuff. All I know is it's generally pretty awesome.",
 
-  "Making Things" => "Just about people that are really good at making things. Whatever that may be."}
+  "Making Things" => "Just about people that are really good at making things. Whatever that may be.",
+
+  "Technology" => "Gizmos and gadgets.",
+
+  "Bicycling" => "From fixies to mountain bikes to beach cruisers.",
+
+  "Dogs" => "If you're a cat person then get the hell out. Dog people only beyond this point"}
 
 
 interest_count = 0
@@ -125,7 +131,7 @@ sites = {
 "https://vimeo.com/95252357" => ["Making Things", "Movies"] ,
 "http://www.musictonic.com" => ["Music"] ,
 "http://www.boreme.com/posting.php?id=9425&page=1/" => ["Video Games"] ,
-"http://www.io9.com/5893615/absolutely-mindblowing-video-shot-from-the-space-shuttle-during-launch/" => ["Astronomy", "Science", "Generally Awesome"] ,
+"http://www.io9.com/5893615/absolutely-mindblowing-video-shot-from-the-space-shuttle-during-launch/" => ["Astronomy", "Science", "Generally Awesome", "Technology"] ,
 "http://www.gtspirit.com/wp-content/gallery/pagani-huayra-road-test-1/21.jpg/" => ["Cars", "Photography"] ,
 "http://www.youtube.com/watch?v=yn3FWb-vQQ4" => [""] ,
 "http://aeon.co/magazine/living-together/james-somers-web-developer-money/" => ["Science", "Making Things"] ,
@@ -139,7 +145,17 @@ sites = {
 "www.panoramas.dk/mars/mars-greeleyhaven2/tour.swf/" => ["Astronomy", "Science"],
 "www.kitchendaily.com/read/best-burgers-us?ncid=dynaldusaolp00000175/" => ["Cooking"],
 "www.neave.com/strobe/" => ["Graphic Design", "Art"],
-"www.randyscottslavin.com/data/photos/93_1slavin_photography_8108.jpg/" => ["Photography"]
+"www.randyscottslavin.com/data/photos/93_1slavin_photography_8108.jpg/" => ["Photography"],
+"http://thoughtcatalog.com/charlie-shaw/2014/05/27-people-share-the-one-cool-internet-or-computer-trick-they-know/", ["Technology"],
+"http://thugkitchen.com/post/51069719327/you-wont-be-stressing-this-summer-if-youre" => ["Cooking"],
+"http://www.playbuzz.com/gregs/17-insanely-cool-street-art-you-just-have-to-see/" => ["Art", "Graphic Design", "Generally Awesome"],
+"http://on.aol.com/video/airbnb-views-518241779/" => ["Travel"],
+"dailypastime.com/if-you-have-an-android-phone-try-these-secret-codes/" => ["Technology"],
+"http://hiconsumption.com/2014/05/skylock-smart-bike-lock/" => ["Technology", "Bicycling"],
+"inspirationhut.net/inspiration/creative-detailed-typography-greg-coulton/" => ["Art", "Graphic Design"],
+"http://ppcdn.500px.org/52866292/9e944f286e9ba110135839dca1aff8a18e18ffe8/2048.jpg" => ["Photography", "Dogs", "Travel"],
+"http://goodfil.ms/films/" => ["Movies", "Video Games", "Animation"],
+"www.thebuildingblox.com/lee-jae-hyos-amazing-wooden-tables/" => ["Making Things", "Generally Awesome"]
 }
 
 sites.each do |url, ints|
