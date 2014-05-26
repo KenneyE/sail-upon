@@ -11,61 +11,62 @@ guest = User.create(username: "Guest User", password: "guestpassword")
 eric = User.create(username: "Eric", password: "foobar")
 
 interests = {
-  "Photography" => "See amazing photos and get photography tips and ideas, from Polaroids to digital cameras.",
-
-  "Science"  => "A lot's happened since your first science fair. Learn about discoveries in space, biology and more.",
-
-  "Art" => "All of the world's finest arts.",
-
-  "Skiing" => "Love sending it to the moon on a blower day? You like shuttin' 'er down with one big McConkey turn? Love blue bird days with all time pow? Love shredding gnar on a...",
-
-  "Astronomy" => "No telescope? No problem. Explore astronomy, from the Big Bang to the mission to Mars.",
-
-  "Movies" => "Always first in line for the best new movies? Explore the magic of Hollywood and the cinema.",
-
-  "Beer" => "Is Oktoberfest your dream vacation? Learn about breweries, craft beers, kegs, beer gardens and more.",
-
-  "Cigars" => "Put on your smoking jacket and explore cigars: the best international brands, accessories and more.",
-
-  "Cars" => "Saving up for a Porsche? Either way, learn about cars, technologies, stunts and more here.",
-
-  "Cooking" => "Cooking or cookery is the art of preparing food for consumption with the use of heat. Hey Wikipedia, that's pretty neat!",
-
-  "Graphic Design" => "From logos to websites, graphic designers have perfected the art of visual communication. Check it out.",
-
-  "Music" => "Music makes the world go round. Discover new bands, songs, lyrics, music videos and more.",
-
-  "Camping" => "Like the idea of being homeless, but only for a couple days? Then get out there with $3000 worth of gear.",
-
-  "Trains" => "Trains are way underrated. Those things are so awesome. Why don't more people think they're awesome?",
-
-  "Video Games" => "So you love no-scoping newbs and crushing Code Red? Love it when a 13 year old calls you a punk bitch? Then come pwn some websites about it.",
-
-  "Fitness" => "So swoll. Brotein into my veins. Need. More. Reps.",
-
-  "Books" => "Love a good read? Then what the hell are you doing here?",
+  "Airplanes" => "If you don't like airplanes, then I don't want to know you.",
 
   "Animation" => "Like Rugrats and Hey Arnold!",
 
   "Architecture" => "Buildings go up. Buildings go down. Art.",
 
-  "Travel" => "See all the world. From the comfort of your desk chair.",
+  "Art" => "All of the world's finest arts.",
 
-  "Airplanes" => "If you don't like airplanes, then I don't want to know you.",
+  "Astronomy" => "No telescope? No problem. Explore astronomy, from the Big Bang to the mission to Mars.",
 
-  "Extreme Sports" => "Have ice water running through your veins? Can't get it up unless your on the brink? Are you sick of these rhetorical questions?",
-
-  "Photoshop"  => "Bad at taking pictures but want to make people think you're good at it? Too cool for instagram? Perfect recipe for a Photoshop master.",
-
-  "Generally Awesome" => "I don't know how to categorize this stuff. All I know is it's generally pretty awesome.",
-
-  "Making Things" => "Just about people that are really good at making things. Whatever that may be.",
-
-  "Technology" => "Gizmos and gadgets.",
+  "Beer" => "Is Oktoberfest your dream vacation? Learn about breweries, craft beers, kegs, beer gardens and more.",
 
   "Bicycling" => "From fixies to mountain bikes to beach cruisers.",
 
-  "Dogs" => "If you're a cat person then get the hell out. Dog people only beyond this point"}
+  "Books" => "Love a good read? Then what the hell are you doing here?",
+
+  "Camping" => "Like the idea of being homeless, but only for a couple days? Then get out there with $3000 worth of gear.",
+
+  "Cars" => "Saving up for a Porsche? Either way, learn about cars, technologies, stunts and more here.",
+
+  "Cigars" => "Put on your smoking jacket and explore cigars: the best international brands, accessories and more.",
+
+  "Cooking" => "Cooking or cookery is the art of preparing food for consumption with the use of heat. Hey Wikipedia, that's pretty neat!",
+
+  "Dogs" => "If you're a cat person then get the hell out. Dog people only beyond this point",
+
+  "Extreme Sports" => "Have ice water running through your veins? Can't get it up unless your on the brink? Are you sick of these rhetorical questions?",
+
+  "Fitness" => "So swoll. Brotein into my veins. Need. More. Reps.",
+
+  "Generally Awesome" => "I don't know how to categorize this stuff. All I know is it's generally pretty awesome.",
+
+  "Graphic Design" => "From logos to websites, graphic designers have perfected the art of visual communication. Check it out.",
+
+  "Making Things" => "Just about people that are really good at making things. Whatever that may be.",
+
+  "Movies" => "Always first in line for the best new movies? Explore the magic of Hollywood and the cinema.",
+
+  "Music" => "Music makes the world go round. Discover new bands, songs, lyrics, music videos and more.",
+
+  "Photography" => "See amazing photos and get photography tips and ideas, from Polaroids to digital cameras.",
+
+  "Photoshop"  => "Bad at taking pictures but want to make people think you're good at it? Too cool for instagram? Perfect recipe for a Photoshop master.",
+
+  "Science"  => "A lot's happened since your first science fair. Learn about discoveries in space, biology and more.",
+
+  "Skiing" => "Love sending it to the moon on a blower day? You like shuttin' 'er down with one big McConkey turn? Love blue bird days with all time pow? Love shredding gnar on a...",
+
+  "Technology" => "Gizmos and gadgets.",
+
+  "Travel" => "See all the world. From the comfort of your desk chair.",
+
+  "Trains" => "Trains are way underrated. Those things are so awesome. Why don't more people think they're awesome?",
+
+  "Video Games" => "So you love no-scoping newbs and crushing Code Red? Love it when a 13 year old calls you a punk bitch? Then come pwn some websites about it."
+  }
 
 
 interest_count = 0
@@ -146,7 +147,7 @@ sites = {
 "www.kitchendaily.com/read/best-burgers-us?ncid=dynaldusaolp00000175/" => ["Cooking"],
 "www.neave.com/strobe/" => ["Graphic Design", "Art"],
 "www.randyscottslavin.com/data/photos/93_1slavin_photography_8108.jpg/" => ["Photography"],
-"http://thoughtcatalog.com/charlie-shaw/2014/05/27-people-share-the-one-cool-internet-or-computer-trick-they-know/", ["Technology"],
+"http://thoughtcatalog.com/charlie-shaw/2014/05/27-people-share-the-one-cool-internet-or-computer-trick-they-know/" => ["Technology"],
 "http://thugkitchen.com/post/51069719327/you-wont-be-stressing-this-summer-if-youre" => ["Cooking"],
 "http://www.playbuzz.com/gregs/17-insanely-cool-street-art-you-just-have-to-see/" => ["Art", "Graphic Design", "Generally Awesome"],
 "http://on.aol.com/video/airbnb-views-518241779/" => ["Travel"],

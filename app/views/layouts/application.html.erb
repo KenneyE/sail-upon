@@ -11,7 +11,7 @@
 
     <script type="application/json" id="current_user_json">
       { "current_user": <%= current_user.to_json.html_safe %>,
-       "user_interests": <%= current_user.interests.to_json.html_safe %>,
+       "user_interests": <%= current_user.interests.to_json.html_safe if current_user %>,
        "interests": <%= Interest.all.to_json.html_safe %>}
     </script>
 
