@@ -1,6 +1,7 @@
 window.App.Views.InterestShow = Backbone.View.extend ({
 
     // className: "col-xs-2",
+    className: "panel panel-default interest-panel",
 
     initialize: function (options) {
         var view = this;

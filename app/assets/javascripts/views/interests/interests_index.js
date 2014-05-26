@@ -7,14 +7,29 @@ window.App.Views.InterestsIndex = Backbone.View.extend ({
     render: function () {
         var content = this.template();
         this.$el.html(content);
+        
         var that = this;
-
         this.collection.each(function (interest) {
             var view = new App.Views.InterestShow({ model: interest });
-            that.$el.append(view.render().$el);
+            that.$el.find(".interests").append(view.render().$el);
         });
+        
+        var $container = this.$el.find('#all-interests');
+        
+        $container.masonry({
+            itemSelector: '.interest-panel',
+        });
+        
+        // initialize
+        $container.imagesLoaded( function () {
+            $container.masonry({
+                itemSelector: '.interest-panel'
+            });
+        })
+        
         return this;
     },
-
+    
     template: JST["interests/index"],
+    
 });
