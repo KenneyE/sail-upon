@@ -37,12 +37,23 @@ div.home-image {
     background: linear-gradient(#2F2F2F, #292929);
 }
 
-.navbar.navbar-2 {background: white; box-shadow: inset 0px 4px 9px -6px;}
-.nav-justified {margin: 5px auto;}
-.navbar.navbar-2 .navbar-nav li {
-    width: 150px;
-    height: 40px;
-    border-left: 1px #dadada solid;
+.navbar-profile li {
+    width: 76px;
+}
+
+.navbar-profile a {
+    height: 100%;
+    font-size: 12px;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    border-left: 1px solid #E5E5E5;
+
+}
+
+.navbar-profile #first {
+    border: none;
 }
 
 .navbar * { color: #D1D2D4;}
@@ -71,6 +82,7 @@ div.home-image {
     color: white;
     font-family: "HelveticaNeueMedium", "HelveticaNeue-Medium",sans-serif;
     font-weight: 500;
+    font-size: 120%;
     letter-spacing: 1px;
     text-align: center;
     border-radius: 3px;
