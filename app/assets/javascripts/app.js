@@ -4,6 +4,13 @@ window.App = {
   Views: {},
   Routers: {},
   initialize: function() {
+      
+      var current_user =
+      JSON.parse($("#current_user_json").html()).current_user;
+      
+      var navbar = new App.Views.Navbar({ current_user:  current_user});
+      $("#navbar").html(navbar.render().$el);
+      
       App.Collections.websites = new App.Collections.Websites();
       new window.App.Routers.AppRouter({$rootEl: $("#content")});
       Backbone.history.start();
