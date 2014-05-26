@@ -4,16 +4,15 @@ window.App.Views.UserShow = Backbone.CompositeView.extend ({
     initialize: function () {
         var view = this;
         this.listenTo(this.model, "sync", this.render);
-        this.listenTo(this.model.interests(), "add", this.addInterest);
-        this.listenTo(this.model.interests(), "remove", this.removeInterest);
-        
-        this.model.interests().each (function (interests) {
+        this.listenTo(this.model.interests(), "sync", this.addInterest);
+        this.model.interests().each (function (interest) {
             view.addInterest(interest);
         });
     },
     
     addInterest: function (interest) {
-        var interestShowView = new App.Views.InterestShow({model: interest});
+        var interestShowView = new App.Views.InterestShow({ model: interest }
+        );
         this.addSubview(".interests", interestShowView);
         interestShowView.render();
     },

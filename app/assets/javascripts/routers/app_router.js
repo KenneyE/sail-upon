@@ -12,9 +12,8 @@ App.Routers.AppRouter = Backbone.Router.extend({
         "sail/:id": "websiteShow",
     },
     
-    interestsIndex: function () {
-        var interests = new App.Collections.Interests();
-        interests.fetch();
+    interestsIndex: function () {        
+        var interests = App.Collections.interests;
         
         var view = new App.Views.InterestsIndex({ collection: interests });
         this.$rootEl.html(view.render().$el);
@@ -23,26 +22,12 @@ App.Routers.AppRouter = Backbone.Router.extend({
     interestShow: function (id) {
         var interest = new App.Models.Interest({id: id});
         interest.fetch();
-        
-        var view = new App.Views.InterestShow({model: interest});
-        this.$rootEl.html(view.render().$el);
-    },
-    
-    userInterestsIndex: function (user_id) {
-        var user = new App.Models.User({id: user_id});
-        
-        var interests = new App.Collections.UserInterests([], { user: user});
-        interests.fetch();
-        
-        var view = new App.Views.InterestsIndex({ collection: interests });
+        var view = new App.Views.InterestShow({ model: interest });
         this.$rootEl.html(view.render().$el);
     },
     
     userShow: function (id) {
-        var user = new App.Models.User({id: id});
-        user.fetch();
-        
-        var view = new App.Views.UserShow({ model: user });
+        var view = new App.Views.UserShow({ model: App.Models.user });
         this.$rootEl.html(view.render().$el);
     },
     

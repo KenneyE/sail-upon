@@ -2,14 +2,10 @@ window.App.Views.Navbar = Backbone.View.extend ({
     template: JST["shared/navbar"],
     
     render: function () {
-        var content = this.template({current_user: this.current_user});
+        var content = this.template({current_user: App.Models.user });
         this.$el.html(content);
         return this;
     },
-    
-    initialize: function (options) {
-        this.current_user = options.current_user;
-    }, 
     
     events: {
         "click .sail-btn": "sail",

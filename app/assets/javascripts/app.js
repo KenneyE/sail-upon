@@ -5,10 +5,19 @@ window.App = {
   Routers: {},
   initialize: function() {
       
-      var current_user =
-      JSON.parse($("#current_user_json").html()).current_user;
+      var bootstrapped_json =
+      JSON.parse($("#current_user_json").html());
       
-      var navbar = new App.Views.Navbar({ current_user:  current_user});
+      App.Models.user = new App.Models.User();
+      App.Models.user.set(bootstrapped_json.current_user);
+      
+      App.Models.user.fetch();
+      App.Models.user.interests().set(bootstrapped_json.user_interests)
+      
+      App.Collections.interests = new App.Collections.Interests();
+      App.Collections.interests.set(bootstrapped_json.interests);
+      
+      var navbar = new App.Views.Navbar();
       $("#navbar").html(navbar.render().$el);
       
       App.Collections.websites = new App.Collections.Websites();
