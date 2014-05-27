@@ -10,8 +10,7 @@
 <body>
 
     <script type="application/json" id="current_user_json">
-      { "current_user": <%= current_user.to_json.html_safe %>,
-       "user_interests": <%= current_user.interests.to_json.html_safe if current_user %>,
+      { "current_user": <%= (render :partial => 'api/users/user', :handlers => [:jbuilder], :locals => {:user => current_user}).html_safe %>,
        "interests": <%= Interest.all.to_json.html_safe %>}
     </script>
 

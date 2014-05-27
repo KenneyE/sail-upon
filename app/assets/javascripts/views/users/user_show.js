@@ -17,6 +17,19 @@ window.App.Views.UserShow = Backbone.CompositeView.extend ({
         interestShowView.render();
     },
     
+    events: {
+        "click .profile-btn": "expandProfile",
+    },
+    
+    expandProfile: function (event) {
+        $div = $( ".profile-row" );
+        if ( $div.is (":hidden") ) {
+           $div.slideDown("slow");            
+        } else {
+            $div.slideUp("slow");
+        }
+    },
+    
     removeInterest: function (interest) {
         var interestShowView = 
         _(this.subviews()[".interests"]).find (function (subview) {
@@ -30,20 +43,20 @@ window.App.Views.UserShow = Backbone.CompositeView.extend ({
         var view = this;
         var content = this.template({user: this.model});
         this.$el.html(content);
+        
+        this.$el.find(".vote-count").html(App.Models.user.get("votes").length);
+        
         this.renderSubviews();
         
         var $container = this.$el.find('#user-interests');
-        
         $container.masonry({
             itemSelector: '.interest-panel',
         });
-        
-        // initialize
         $container.imagesLoaded( function () {
             $container.masonry({
                 itemSelector: '.interest-panel'
             });
-        })
+        });
         return this;
     },
 });

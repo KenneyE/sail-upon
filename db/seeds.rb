@@ -57,7 +57,7 @@ interests = {
 
   "Science"  => "A lot's happened since your first science fair. Learn about discoveries in space, biology and more.",
 
-  "Skiing" => "Love sending it to the moon on a blower day? You like shuttin' 'er down with one big McConkey turn? Love blue bird days with all time pow? Love shredding gnar on a...",
+  "Skiing" => "Love sending it to the moon on a blower day? Love shuttin er down with one big McConkey turn? Love blue bird days with all time pow? Love hanging it out to dry off a dope kicker? Are your Pontoons not wide enough?",
 
   "Technology" => "Gizmos and gadgets.",
 

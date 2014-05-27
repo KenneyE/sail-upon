@@ -7,12 +7,12 @@ window.App = {
       
       var bootstrapped_json =
       JSON.parse($("#current_user_json").html());
-      
+
       App.Models.user = new App.Models.User();
       App.Models.user.set(bootstrapped_json.current_user);
       
       App.Models.user.fetch();
-      App.Models.user.interests().set(bootstrapped_json.user_interests)
+      App.Models.user.interests().set(bootstrapped_json.current_user.interests);
       
       App.Collections.interests = new App.Collections.Interests();
       App.Collections.interests.set(bootstrapped_json.interests);
