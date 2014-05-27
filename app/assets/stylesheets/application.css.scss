@@ -1,17 +1,17 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- *= require_tree .
- *= require jquery.ui.all
- */
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the top of the
+* compiled file, but it's generally better to create a new file per style scope.
+*
+*= require_self
+*= require_tree .
+*= require jquery.ui.all
+*/
 
 @import "bootstrap";
 body { background: #EDEDED;}
@@ -36,6 +36,7 @@ div.home-image {
     background: -o-linear-gradient(#2F2F2F, #292929);
     background: -moz-linear-gradient(#2F2F2F, #292929);
     background: linear-gradient(#2F2F2F, #292929);
+    padding-right: 10px;
 }
 
 .navbar-profile li {
@@ -78,6 +79,10 @@ div.home-image {
     border-right: 1px #4B4B4B solid;
 }
 
+.navbar .has-icon:hover span{
+    color: white;
+};
+
 .sail-style-btn {
     border: none;
     color: white;
@@ -114,6 +119,19 @@ div.home-image {
     background: linear-gradient(#FE6B3E, #EC5A2D);
 }
 
+.sail-style-btn:focus {
+    outline: none;
+};
+
+.sail-style-btn:active {
+    background: -webkit-linear-gradient(#ED5A2D, #DB491E);
+    background: -o-linear-gradient(#ED5A2D, #DB491E);
+    background: -moz-linear-gradient(#ED5A2D, #DB491E);
+    background: linear-gradient(#ED5A2D, #DB491E);
+    outline: none;
+    box-shadow: 0 0 5px 2px #DB491E inset;
+};
+
 .vote-btn {
     background: #1D1D1D;
     outline: none;
@@ -124,6 +142,17 @@ div.home-image {
 
 .vote-btn:hover {
     background: #1D1D1D;
+    outline: none;
+    border: none;
+};
+
+.vote-btn:focus {
+    background: #1D1D1D;
+    outline: none;
+    border: none;
+};
+
+.vote-btn:active {
     outline: none;
     border: none;
 };

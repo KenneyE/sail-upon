@@ -11,15 +11,21 @@ window.App.Views.Navbar = Backbone.View.extend ({
         "click .sail-btn": "sail",
         "click .thumbs-down": "downvote",
         "click .thumbs-up": "upvote",
-        // "click .sign-out": "signOut",
+        "click .sign-out": "signOut",
     },
     
     sail: function (event) {
-        Backbone.history.navigate("sail", {trigger: true})
+        Backbone.history.navigate("sail", {trigger: true});
     },
     
     signOut: function (event) {
-       debugger 
+       $.ajax ({
+           url: 'session/',
+           type: "DELETE",
+       });
+       debugger
+       App.Models.user = undefined;
+       Backbone.history.navigate("#", {trigger: true});  
     },
     
     downvote: function (event) {
