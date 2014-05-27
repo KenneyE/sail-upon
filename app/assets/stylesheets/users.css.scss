@@ -22,13 +22,35 @@
     color: white;
 }
 
-.profile-row .user-info {
-    font-size: 28px;
-}
+.profile-row .user-info { font-size: 28px; }
 
-.data-count { float: bottom;}
-
+.data-count { position: relative; top: 190px; display: inline-block;}
+.data-count * {margin: 0 10px;}
 .user-nav { margin-bottom: 0px; }
 
 .logo { position: relative; width: 397px; margin: auto;  z-index: 11; }
 .logo img {z-index: 10; position: relative; width: 100%; margin: auto;}
+
+.navbar-profile {
+    width: 300px;
+    margin-left: -35px;
+}
+
+.navbar-profile li {
+    width: 33%;
+}
+
+.navbar-profile a {
+    height: 100%;
+    font-size: 12px;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    border-left: 1px solid #E5E5E5;
+
+}
+
+.navbar-profile #first {
+    border: none;
+}

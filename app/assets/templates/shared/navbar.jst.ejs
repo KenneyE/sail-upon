@@ -12,7 +12,7 @@
       <div class="navbar-center navbar-flash navbar-section">
         <ul class="nav navbar-nav">
           <li>
-            <h3>Welcome back, <span class="username">
+            <h3 class="flash-text">Welcome back, <span class="username">
               <%= current_user.get('username') %>!</span>
             </h3>
           </li>
@@ -92,6 +92,6 @@
 
   <script>
     $(function () {
-      $(".navbar-flash").delay(2000).fadeOut(2000)
+      $(".navbar-flash").delay(3000).fadeOut(2000)
     });
   </script

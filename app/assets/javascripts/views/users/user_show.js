@@ -41,10 +41,13 @@ window.App.Views.UserShow = Backbone.CompositeView.extend ({
     
     render: function () {
         var view = this;
+        var user = App.Models.user;
         var content = this.template({user: this.model});
         this.$el.html(content);
         
-        this.$el.find(".vote-count").html(App.Models.user.get("votes").length);
+        this.$el.find(".vote-count").html(user.get("votes").length);
+        this.$el.find(".interest-count").html(user.interests().length);
+        this.$el.find(".sail-count").html(user.sailCount);
         
         this.renderSubviews();
         

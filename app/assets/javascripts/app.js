@@ -13,9 +13,12 @@ window.App = {
       
       App.Models.user.fetch();
       App.Models.user.interests().set(bootstrapped_json.current_user.interests);
+
+      App.Models.user.sailCount = bootstrapped_json.current_user.sail_count;
       
       App.Collections.interests = new App.Collections.Interests();
       App.Collections.interests.set(bootstrapped_json.interests);
+      
       
       var navbar = new App.Views.Navbar();
       $("#navbar").html(navbar.render().$el);

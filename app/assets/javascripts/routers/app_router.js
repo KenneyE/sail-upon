@@ -10,6 +10,12 @@ App.Routers.AppRouter = Backbone.Router.extend({
         "interests/:id": "interestShow", 
         "sail": "websitePick",
         "sail/:id": "websiteShow",
+        "about": "aboutShow",
+    },
+    
+    aboutShow: function () {
+        var view = new App.Views.AboutShow();
+        this.$rootEl.html(view.render().$el);
     },
     
     interestsIndex: function () {        

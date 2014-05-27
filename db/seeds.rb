@@ -11,7 +11,7 @@ guest = User.create(username: "Guest User", password: "guestpassword")
 eric = User.create(username: "Eric", password: "foobar")
 
 interests = {
-  "Airplanes" => "If you don't like airplanes, then I don't want to know you.",
+  "Airplanes" => "If you don't like airplanes, then I don't want to know you. Flat out.",
 
   "Animation" => "Like Rugrats and Hey Arnold!",
 
@@ -21,13 +21,13 @@ interests = {
 
   "Astronomy" => "No telescope? No problem. Explore astronomy, from the Big Bang to the mission to Mars.",
 
-  "Beer" => "Is Oktoberfest your dream vacation? Learn about breweries, craft beers, kegs, beer gardens and more.",
+  "Beer" => "Do your friends hate going to breweries with you? Do you love IPAs because it seems to be what beer aficionados do? Or do you just love getting drunk?",
 
   "Bicycling" => "From fixies to mountain bikes to beach cruisers.",
 
   "Books" => "Love a good read? Then what the hell are you doing here?",
 
-  "Camping" => "Like the idea of being homeless, but only for a couple days? Then get out there with $3000 worth of gear.",
+  "Camping" => "Like the idea of being homeless, but only for a couple days?",
 
   "Cars" => "Saving up for a Porsche? Either way, learn about cars, technologies, stunts and more here.",
 
@@ -39,7 +39,7 @@ interests = {
 
   "Extreme Sports" => "Have ice water running through your veins? Can't get it up unless your on the brink? Are you sick of these rhetorical questions?",
 
-  "Fitness" => "So swoll. Brotein into my veins. Need. More. Reps.",
+  "Fitness" => "Considering that you're here, I don't believe you.",
 
   "Generally Awesome" => "I don't know how to categorize this stuff. All I know is it's generally pretty awesome.",
 
@@ -55,7 +55,7 @@ interests = {
 
   "Photoshop"  => "Bad at taking pictures but want to make people think you're good at it? Too cool for instagram? Perfect recipe for a Photoshop master.",
 
-  "Science"  => "A lot's happened since your first science fair. Learn about discoveries in space, biology and more.",
+  "Science"  => "You ever watched Breaking Bad and think, 'I could do that!'?",
 
   "Skiing" => "Love sending it to the moon on a blower day? Love shuttin er down with one big McConkey turn? Love blue bird days with all time pow? Love hanging it out to dry off a dope kicker? Are your Pontoons not wide enough?",
 
@@ -63,7 +63,7 @@ interests = {
 
   "Travel" => "See all the world. From the comfort of your desk chair.",
 
-  "Trains" => "Trains are way underrated. Those things are so awesome. Why don't more people think they're awesome?",
+  "Trains" => "Trains are way underrated. Those things are so awesome. Why don't more people talk about that?",
 
   "Video Games" => "So you love no-scoping newbs and crushing Code Red? Love it when a 13 year old calls you a punk bitch? Then come pwn some websites about it."
   }

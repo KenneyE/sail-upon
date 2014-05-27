@@ -16,6 +16,11 @@ window.App.Views.Navbar = Backbone.View.extend ({
     },
     
     sail: function (event) {
+        $.ajax({
+            url: 'api/new_sail',
+            type: 'POST',
+        })
+        App.Models.user.sailCount++;
         Backbone.history.navigate("sail", {trigger: true});
     },
     
