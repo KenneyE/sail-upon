@@ -8,6 +8,7 @@ window.App.Views.UserShow = Backbone.CompositeView.extend ({
         this.model.interests().each (function (interest) {
             view.addInterest(interest);
         });
+        this.render();
     },
     
     addInterest: function (interest) {

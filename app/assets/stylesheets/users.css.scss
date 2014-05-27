@@ -12,6 +12,7 @@
 }
 
 .profile-row {
+    position: relative;
     display: none;
     height: 275px;
     margin-top: 0;
@@ -20,11 +21,14 @@
     font-weight: bold;
     text-align: center;
     color: white;
+    background-image: url('/logo_boat_gray.png');
+    background-repeat: no-repeat;
+    background-position: 50% -100%;
 }
 
 .profile-row .user-info { font-size: 28px; }
 
-.data-count { position: relative; top: 190px; display: inline-block;}
+.data-count { position: relative; bottom: -120px; display: inline-block;}
 .data-count * {margin: 0 10px;}
 .user-nav { margin-bottom: 0px; }
 

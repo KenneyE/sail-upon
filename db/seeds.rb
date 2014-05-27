@@ -160,7 +160,11 @@ sites = {
 "www.officiallyfun.com/entertainment/the-international-space-station-experiments-with-long-exposure-photography-12-photos/" => ["Photography", "Astronomy", "Science", "Technology"],
 "http://hakim.se/experiments/html5/keylight/03/#331x369_450x316_612x502_540x669_3" => ["Technology", "Graphic Design", "Generally Awesome"],
 "saganseries.com/" => ["Science", "Astronomy"],
-"www.designboom.com/technology/interactive-water-light-graffiti-wall-installation-by-antonin-fourneau/" => ["Art", "Architecture"]
+"www.designboom.com/technology/interactive-water-light-graffiti-wall-installation-by-antonin-fourneau/" => ["Art", "Architecture"],
+"slow.com/" => ["Technology"],
+"blog.beeriety.com/2009/07/06/how-beer-is-made/" => ["Beer"],
+"onebigphoto.com/milky-way-over-mount-fuji/" => ["Photography", "Travel"],
+"http://www.barcinski-jeanjean.com/entries/endlessintrestingness/" => ["Generally Awesome"],
 }
 
 sites.each do |url, ints|
