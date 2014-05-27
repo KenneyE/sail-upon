@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>App</title>
+    <title>SailUpon</title>
     <%= stylesheet_link_tag 'application' %>
     <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
@@ -14,7 +14,9 @@
        "interests": <%= Interest.all.to_json.html_safe %>}
     </script>
 
+    <% if logged_in? %>
     <div id="navbar"></div>
+    <% end %>
     <%#= render 'shared/navbar' %>
     <div class="container-fluid" id="wrapper">
         <div class="notice alert-error"></div>

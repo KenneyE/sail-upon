@@ -139,7 +139,6 @@ sites = {
 "http://blog.assaflavie.com/touch/" => ["Science"],
 "http://www.esquire.com/blogs/car-news/51-coolest-cars-of-the-last-50-years/" => ["Cars"],
 "http://www.365tomorrows.com/11/15/the-djinn-effect/" => ["Science"],
-"http://www.nikon.com/about/feelnikon/universcale/index_f.htm/" => ["Science", "Photograpy"],
 "http://www.flightradar24.com/t_blank/" => ["Airplanes"],
 "www.dtelepathy.com/blog/inspiration/beautiful-color-palettes-for-your-next-web-project/" => ["Graphic Design", "Art", "Photoshop"],
 "http://www.imgur.com/a/rNPff?gallery/" => ["Movies", "Art", "Graphic Design"],

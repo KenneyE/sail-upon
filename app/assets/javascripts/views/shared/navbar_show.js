@@ -11,10 +11,15 @@ window.App.Views.Navbar = Backbone.View.extend ({
         "click .sail-btn": "sail",
         "click .thumbs-down": "downvote",
         "click .thumbs-up": "upvote",
+        // "click .sign-out": "signOut",
     },
     
     sail: function (event) {
         Backbone.history.navigate("sail", {trigger: true})
+    },
+    
+    signOut: function (event) {
+       debugger 
     },
     
     downvote: function (event) {
