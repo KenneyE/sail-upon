@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+div.interests {
+    padding-left: 110px;
+}
+
 .panel-heading.dark-blue, .interest-panel-image.dark-blue  {background: #0070AA;}
 .panel-heading.light-blue, .interest-panel-image.light-blue  {background: #0096D6;}
 .panel-heading.orange , .interest-panel-image.orange  {background: #EE6633;}

@@ -8,15 +8,26 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+
+      <div class="navbar-center navbar-flash navbar-section">
+        <ul class="nav navbar-nav">
+          <li>
+            <h3>Welcome back, <span class="username">
+              <%= current_user.get('username') %>!</span>
+            </h3>
+          </li>
+        </ul>
+      </div>
+
       <div class="navbar-center navbar-section">
         <ul class="nav navbar-nav">
-          <li class="thumb thumbs-down has-icon">
+          <li class="thumb thumbs-down">
             <button class="btn btn-default btn-lg vote-btn">
               <span class="glyphicon glyphicon-thumbs-down"></span>
             </button>
           </li>
           <li><button class="sail-btn sail-style-btn">Sail</button></li>
-          <li class="thumb thumbs-up has-icon">
+          <li class="thumb thumbs-up">
             <button class="btn btn-default btn-lg vote-btn">
               <span class="glyphicon glyphicon-thumbs-up"></span>
             </button>
@@ -26,32 +37,61 @@
     </div>
 
     <div class="collapse navbar-collapse" id="su-navbar-collapse-1">
+
       <ul class="nav navbar-nav  navbar-section">
-        <li class="has-icon">
+        <li>
           <a data-toggle="modal" data-target="#new-website-form" class="btn btn-lg">
             <span class="glyphicon glyphicon-plus"></span>
           </a>
         </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right  navbar-section">
-        <li class="has-icon">
-          <a href="#/users/<%= current_user.id %>" class="btn btn-lg">
-            <span class="glyphicon glyphicon-home"></span>
-          </a>
-        </li>
-        <li class="dropdown has-icon">
+        <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            <%= current_user.get("username") %> <span class="caret"></span>
+            Your Interests <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
-            <li><a href="#/users/<%= current_user.id %>">Your Interests</a></li>
-            <li><a href="#/interests">Add Interests</a></li>
-            <li><a href="#/interests">Propose New Interest</a></li>
+            <li><h4>Now Sailing:</h4></li>
             <li class="divider"></li>
-            <li><button class="btn btn-link sign-out">Sign Out</button></li>
-          </ul>
-        </li>
-      </ul>
+            <ul class="dropdown-interests">
+              <% current_user.interests().forEach (function (int) { %>
+                <% var img_name = int.get("name").replace(" ", "_"); %>
+                <% var src = "interests/" +  img_name + ".jpg"; %>
+                <li class="dropdown-interest">
+                  <img src="<%= src %>">
+                  <%= int.get('name') %>
+                </li>
+                <% }) %>
+              </ul>
+              <li class="divider"></li>
+              <li><a href="#/interests">Edit Interests</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right  navbar-section">
+          <li>
+            <a href="#/users/<%= current_user.id %>" class="btn btn-lg">
+              <span class="glyphicon glyphicon-home"></span>
+            </a>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <%= current_user.get("username") %> <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#/users/<%= current_user.id %>">Your Interests</a></li>
+              <li><a href="#/interests">Add Interests</a></li>
+              <li><a href="#/interests">Propose New Interest</a></li>
+              <li class="divider"></li>
+              <li><button class="btn btn-link sign-out">Sign Out</button></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
+
+  <script>
+    $(function () {
+      $(".navbar-flash").delay(2000).fadeOut(2000)
+    });
+  </script

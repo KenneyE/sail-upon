@@ -22,9 +22,7 @@ window.App.Views.InterestShow = Backbone.View.extend ({
         var content = this.template({ interest: this.model, 
             interested: this.is_interested});
             var img_name = this.model.get("name").replace(" ", "_");
-            var src = "interests/" + 
-            img_name + 
-            ".jpg";
+            var src = "interests/" +  img_name + ".jpg";
             this.$el.data(String(this.model.id));
             this.$el.html(content);
             this.$el.find(".interest-panel-image > img").attr("src", src);

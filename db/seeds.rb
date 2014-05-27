@@ -154,7 +154,13 @@ sites = {
 "inspirationhut.net/inspiration/creative-detailed-typography-greg-coulton/" => ["Art", "Graphic Design"],
 "http://ppcdn.500px.org/52866292/9e944f286e9ba110135839dca1aff8a18e18ffe8/2048.jpg" => ["Photography", "Dogs", "Travel"],
 "http://goodfil.ms/films/" => ["Movies", "Video Games", "Animation"],
-"www.thebuildingblox.com/lee-jae-hyos-amazing-wooden-tables/" => ["Making Things", "Generally Awesome"]
+"www.thebuildingblox.com/lee-jae-hyos-amazing-wooden-tables/" => ["Making Things", "Generally Awesome"],
+"http://iacopoapps.appspot.com/hopalongwebgl/" => ["Graphic Design", "Animation"],
+"http://threesixfive.tv/phantom-1000-fps-ski-shoot/" => ["Skiing", "Movies", "Photography"],
+"www.officiallyfun.com/entertainment/the-international-space-station-experiments-with-long-exposure-photography-12-photos/" => ["Photography", "Astronomy", "Science", "Technology"],
+"http://hakim.se/experiments/html5/keylight/03/#331x369_450x316_612x502_540x669_3" => ["Technology", "Graphic Design", "Generally Awesome"],
+"saganseries.com/" => ["Science", "Astronomy"],
+"www.designboom.com/technology/interactive-water-light-graffiti-wall-installation-by-antonin-fourneau/" => ["Art", "Architecture"]
 }
 
 sites.each do |url, ints|

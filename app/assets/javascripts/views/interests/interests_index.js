@@ -23,7 +23,7 @@ window.App.Views.InterestsIndex = Backbone.View.extend ({
         // initialize
         $container.imagesLoaded( function () {
             $container.masonry({
-                itemSelector: '.interest-panel'
+                itemSelector: '.interest-panel',
             });
         })
         

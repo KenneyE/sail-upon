@@ -73,13 +73,34 @@ div.home-image {
     height: 100%;
 }
 
+.navbar-center.navbar-flash {
+    width: 600px;
+    margin-left: -300px;
+    z-index: 100;
+    background: #EC5A2D;
+    text-align: center;
+}
+
+.navbar-center.navbar-flash h3 {
+    color: white;
+    font-weight: 100;
+    margin: 0 auto;
+    padding-top: 10px;
+    width: 600px;
+}
+
+.navbar-center.navbar-flash h3 span {
+    font-weight: 300;
+    color: white;
+}
+
 .navbar-section {
     background: #1D1D1D;
     border-left: 1px #4B4B4B solid;
     border-right: 1px #4B4B4B solid;
 }
 
-.navbar .has-icon:hover span{
+li:hover, li:hover span{
     color: white;
 };
 
@@ -173,3 +194,30 @@ div.home-image {
     margin: 0;
 }
 
+.dropdown-interests {
+    height: 450px;
+    width: 330px;
+    border: solid 1px #888888;
+    overflow: scroll;
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+    color: #444444;
+
+}
+
+.dropdown-interest {
+    border: 1px solid #E5E5E5;
+    padding: 2px 0;
+    color: #444444;
+}
+
+.dropdown-interest:hover {
+    color: white;
+    background: #2D2D2D;
+}
+
+.dropdown-interest img {
+    width: 50px;
+    height: 35px;
+}

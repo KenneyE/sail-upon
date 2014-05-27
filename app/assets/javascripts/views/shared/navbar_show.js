@@ -4,6 +4,7 @@ window.App.Views.Navbar = Backbone.View.extend ({
     render: function () {
         var content = this.template({current_user: App.Models.user });
         this.$el.html(content);
+        
         return this;
     },
     
