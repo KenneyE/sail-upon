@@ -8,8 +8,9 @@ App::Application.routes.draw do
     resources :users, only: [:edit, :index, :show] do
       resources :interests, shallow: true
     end
+    resources :websites, only: [:show, :create]
+
     post '/new_sail', to: 'users#sail_count'
-    get '/websites', to: 'websites#show'
     post '/websites/:website_id/vote/:vote_key', to: 'votes#vote'
     get '/interests', to: 'interests#full_index'
 

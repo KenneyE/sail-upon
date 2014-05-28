@@ -6,7 +6,7 @@ class Interest < ActiveRecord::Base
   has_many :user_interests
   has_many :users, through: :user_interests, source: :user
 
-  has_many :website_interests
+  has_many :website_interests, inverse_of: :interest
   has_many :websites, through: :website_interests, source: :website
 
   def find_website_by_interest

@@ -17,6 +17,7 @@
 //= require backbone
 //= require_tree ../images
 //= require app
+//= require serializeJSON
 //= require_tree ../templates
 //= require_tree ./models
 //= require_tree ./collections

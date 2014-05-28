@@ -5,12 +5,10 @@ class Website < ActiveRecord::Base
   before_validation :ensure_url_format
 
   belongs_to :submitter, class_name: "User", foreign_key: :submitter_id
-  has_many :website_interests
+  has_many :website_interests, inverse_of: :website
   has_many :interests, through: :website_interests
 
   has_many :votes
-
-
 
   def count_votes
     count = 0

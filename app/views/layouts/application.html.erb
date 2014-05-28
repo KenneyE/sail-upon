@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>SailUpon</title>
+    <title>SailUpon the seas of the interweb</title>
     <link rel="icon" href="favicon.png" type="image/png" />
     <%= stylesheet_link_tag 'application' %>
     <%= javascript_include_tag 'application' %>
@@ -22,6 +22,7 @@
     <div class="container-fluid" id="wrapper">
         <%= yield %>
     </div>
-    <%= render 'shared/new_site_modal' %>
+
+    <div id="new-site-modal"></div>
 </body>
 </html>

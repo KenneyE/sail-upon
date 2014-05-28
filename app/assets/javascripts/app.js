@@ -20,6 +20,9 @@ window.App = {
       App.Collections.interests = new App.Collections.Interests();
       App.Collections.interests.set(bootstrapped_json.interests);
       
+      var modal = new App.Views.NewSiteModalShow();
+      $("#new-site-modal").html(modal.render().$el);
+      
       
       var navbar = new App.Views.Navbar();
       $("#navbar").html(navbar.render().$el);
