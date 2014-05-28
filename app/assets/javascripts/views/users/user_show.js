@@ -56,9 +56,9 @@ window.App.Views.UserShow = Backbone.CompositeView.extend ({
         this.renderSubviews();
         
         var $container = this.$el.find('#user-interests');
-        $container.masonry({
-            itemSelector: '.interest-panel',
-        });
+        // $container.masonry({
+        //     itemSelector: '.interest-panel',
+        // });
         $container.imagesLoaded( function () {
             $container.masonry({
                 itemSelector: '.interest-panel'

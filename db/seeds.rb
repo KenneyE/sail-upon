@@ -165,7 +165,8 @@ sites = {
 "blog.beeriety.com/2009/07/06/how-beer-is-made/" => ["Beer"],
 "onebigphoto.com/milky-way-over-mount-fuji/" => ["Photography", "Travel"],
 "http://www.barcinski-jeanjean.com/entries/endlessintrestingness/" => ["Generally Awesome"],
-"dfcovideo.com/random/29er-bike-completely-parallel-to-the-ground/" => ["Extreme Sports"]
+"dfcovideo.com/random/29er-bike-completely-parallel-to-the-ground/" => ["Extreme Sports"],
+"www.totalfilm.com/features/20-upcoming-trailers-we-re-most-excited-about/" => ["Movies"]
 }
 
 sites.each do |url, ints|
