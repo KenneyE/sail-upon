@@ -1,5 +1,12 @@
 .panel.interest-panel.about-panel {
     width: 100%;
     font-size: 1.2em;
+}
 
+.panel.interest-panel.about-panel p {
+    padding: 10px;
+}
+
+.panel.interest-panel.about-panel li:hover {
+    color: #6D6E71;
 }
