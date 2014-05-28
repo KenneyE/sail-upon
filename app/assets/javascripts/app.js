@@ -15,6 +15,7 @@ window.App = {
       App.Models.user.interests().set(bootstrapped_json.current_user.interests);
 
       App.Models.user.sailCount = bootstrapped_json.current_user.sail_count;
+      App.Models.user.voteCount = bootstrapped_json.current_user.votes.length;
       
       App.Collections.interests = new App.Collections.Interests();
       App.Collections.interests.set(bootstrapped_json.interests);

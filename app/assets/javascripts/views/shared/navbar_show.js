@@ -35,20 +35,34 @@ window.App.Views.Navbar = Backbone.View.extend ({
     },
     
     downvote: function (event) {
+        var view = this;
         var id = event.currentTarget.dataset.id;
         $.ajax({
             url: "api/websites/" + id + "/vote/0",
             dataType: 'json',
             type: 'POST',
+            success: function (resp) {
+                view.updateVoteCount(resp);
+            }
         });
     },
     
     upvote: function (event) {
+        var view = this;
         var id = event.currentTarget.dataset.id;
         $.ajax({
             url: "api/websites/" + id + "/vote/1",
             dataType: 'json',
             type: 'POST',
+            success: function (resp) {
+                view.updateVoteCount(resp);
+            }
         });
+    },
+    
+    updateVoteCount: function (resp) {
+        if (resp.status === "new") {
+            App.Models.user.voteCount++;
+        }
     },
 });

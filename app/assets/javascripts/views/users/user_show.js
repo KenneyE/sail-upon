@@ -8,7 +8,7 @@ window.App.Views.UserShow = Backbone.CompositeView.extend ({
         this.model.interests().each (function (interest) {
             view.addInterest(interest);
         });
-        this.render();
+        this.render();        
     },
     
     addInterest: function (interest) {
@@ -42,13 +42,13 @@ window.App.Views.UserShow = Backbone.CompositeView.extend ({
     
     render: function () {
         var view = this;
-        var user = App.Models.user;
+        // var user = App.Models.user;
         var content = this.template({user: this.model});
         this.$el.html(content);
         
-        this.$el.find(".vote-count").html(user.get("votes").length);
-        this.$el.find(".interest-count").html(user.interests().length);
-        this.$el.find(".sail-count").html(user.sailCount);
+        this.$el.find(".vote-count").html(this.model.voteCount);
+        this.$el.find(".interest-count").html(this.model.interests().length);
+        this.$el.find(".sail-count").html(this.model.sailCount);
         
         this.renderSubviews();
         

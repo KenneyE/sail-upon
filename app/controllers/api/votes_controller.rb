@@ -5,13 +5,16 @@ module Api
       vote = Vote.find_by(user_id: current_user.id, website_id: params[:website_id])
       if vote
         vote.update_attributes(upvote: upvote)
+        status = "updated"
       else
         vote = Vote.new(user_id: current_user.id,
                         website_id: params[:website_id],
                         upvote: upvote)
         vote.save
+        status = "new"
       end
-      render json: vote
+
+      render json: { vote: vote, status: status }
     end
 
     # private
