@@ -4,6 +4,8 @@ window.App.Collections.UserInterests = Backbone.Collection.extend ({
         this.user = options.user;
     },
     
+    comparator: 'name',
+    
     model: App.Models.Interest,
     
     url: function () {

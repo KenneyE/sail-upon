@@ -30,15 +30,15 @@
   </div>
 </div>
 
-
+<div class="row user-profile-header">
+      <% if (user.interests().length === 0) { %>
+        <h1>You have no interests! <a href="#/interests">Pick some!</a></h1>
+      <% } else { %>
+        <h1>We've mapped the treacherous seas of the internet for you. And it was disgusting.</h1>
+                <h2>Here's your interests</h2>
+      <% } %>
+</div>
 
 <div class="row">
-  <div class="col-xs-12">
-    <% if (user.interests().length === 0) { %>
-      <div class="col col-xs-4 col-xs-offset-4">
-        <h1>You have no interests! <a href="#/interests">Pick some!</a></h1>
-      </div>
-    <% } %>
     <div class="interests" id="user-interests"></div>
-  </div>
 </div>

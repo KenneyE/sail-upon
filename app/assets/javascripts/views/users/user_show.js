@@ -5,6 +5,9 @@ window.App.Views.UserShow = Backbone.CompositeView.extend ({
         var view = this;
         this.listenTo(this.model, "sync", this.render);
         this.listenTo(this.model.interests(), "sync", this.addInterest);
+        // this.listenTo(this.model.interests(), "remove", this.render);
+        // this.listenTo(this.model.interests(), "add", this.render);
+        // 
         this.model.interests().each (function (interest) {
             view.addInterest(interest);
         });
@@ -42,7 +45,7 @@ window.App.Views.UserShow = Backbone.CompositeView.extend ({
     
     render: function () {
         var view = this;
-        // var user = App.Models.user;
+        this.model.interests().sort();
         var content = this.template({user: this.model});
         this.$el.html(content);
         

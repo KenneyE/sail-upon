@@ -29,9 +29,8 @@ window.App.Views.Navbar = Backbone.View.extend ({
            url: 'session/',
            type: "DELETE",
        });
-       debugger
        App.Models.user = undefined;
-       Backbone.history.navigate("#", {trigger: true});  
+       window.location.href = "/session/new";
     },
     
     downvote: function (event) {

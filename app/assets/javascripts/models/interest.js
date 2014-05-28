@@ -7,7 +7,7 @@ window.App.Models.Interest = Backbone.Model.extend ({
         }
     },
     
-    follow: function () {        
+    follow: function () {  
         $.ajax({
             url:  "api/user_interests/" + this.id,
             dataType: 'json',
