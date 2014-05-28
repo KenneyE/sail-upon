@@ -27,4 +27,3 @@
 //= require bootstrap
 //= require masonry.pkgd
 //= require imagesloaded.pkgd
-//= require shepherd
