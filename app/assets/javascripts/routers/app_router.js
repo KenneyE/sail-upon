@@ -1,6 +1,9 @@
 App.Routers.AppRouter = Backbone.Router.extend({
     initialize: function (options) {
         this.$rootEl = options.$rootEl;
+        this.on('all', function(routeEvent) {
+            $('.thumbs-up, .thumbs-down').removeClass('voted');
+        });
     },
     
     routes: {

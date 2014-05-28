@@ -37,11 +37,14 @@ window.App.Views.Navbar = Backbone.View.extend ({
     downvote: function (event) {
         var view = this;
         var id = event.currentTarget.dataset.id;
+
         $.ajax({
             url: "api/websites/" + id + "/vote/0",
             dataType: 'json',
             type: 'POST',
             success: function (resp) {
+                $('.thumbs-up').removeClass('voted');
+                $(event.currentTarget).addClass('voted');
                 view.updateVoteCount(resp);
             }
         });
@@ -50,11 +53,14 @@ window.App.Views.Navbar = Backbone.View.extend ({
     upvote: function (event) {
         var view = this;
         var id = event.currentTarget.dataset.id;
+        
         $.ajax({
             url: "api/websites/" + id + "/vote/1",
             dataType: 'json',
             type: 'POST',
             success: function (resp) {
+                $('.thumbs-down').removeClass('voted');
+                $(event.currentTarget).addClass('voted')        
                 view.updateVoteCount(resp);
             }
         });

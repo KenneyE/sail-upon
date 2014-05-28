@@ -58,6 +58,7 @@
                 <li class="dropdown-interest">
                   <img src="<%= src %>">
                   <%= int.get('name') %>
+                  <%= current_user.interests().length %>
                 </li>
                 <% }) %>
               </ul>
