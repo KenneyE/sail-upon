@@ -23,6 +23,7 @@ window.App.Views.UserShow = Backbone.CompositeView.extend ({
     
     events: {
         "click .profile-btn": "expandProfile",
+        "click .sail-btn": "sail",
     },
     
     expandProfile: function (event) {
@@ -65,5 +66,15 @@ window.App.Views.UserShow = Backbone.CompositeView.extend ({
             });
         });
         return this;
+    },
+    
+    sail: function (event) {
+        debugger
+        $.ajax({
+            url: 'api/new_sail',
+            type: 'POST',
+        })
+        App.Models.user.sailCount++;
+        Backbone.history.navigate("sail", {trigger: true});
     },
 });

@@ -16,6 +16,7 @@ window.App.Views.Navbar = Backbone.View.extend ({
     },
     
     sail: function (event) {
+        debugger
         $.ajax({
             url: 'api/new_sail',
             type: 'POST',
