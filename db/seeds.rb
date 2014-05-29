@@ -177,13 +177,15 @@ sites = {
 "www.adventure-journal.com/2014/02/weekend-cabin-lake-joseph-boathouse-new-york/" => ["Architecture", "Travel"],
 "www.pastemagazine.com/blogs/lists/2014/05/100-craft-beers-you-have-to-drink.html?a=1/" => ["Beer", "Cooking"],
 "airows.com/40-incredibly-creative-logo-designs-2/" => ["Graphic Design", "Art"],
-# "http://www.bookswithfriends.co/session/new" => ["Web Development", "Books"],
+# "http://bookswithfriends.co/session/new" => ["Web Development", "Books"],
 # "http://sketchmate.herokuapp.com/" => ["Web Development", "Games", "Art"],
 # "http://air-dnd.herokuapp.com/" => ["Web Development", "Games"],
 # "http://kiva-for-paralegals.herokuapp.com/session/new" => ["Web Development"],
-# "http://www.swift-reader.com/" => ["Web Development", "Books"],
-"http://www.whatsgroovy.com/" => ["Web Development", "Music", "Games"]
-# "http://www.dindin.io/" => ["Cooking", "Web Development"]
+# "http://swift-reader.com/" => ["Web Development", "Books"],
+"http://www.whatsgroovy.com/" => ["Web Development", "Music", "Games"],
+"http://kenneye.github.io/snake/" => ["Games", "Video Games", "Web Development"],
+"http://kenneye.github.io/asteroids/" => ["Games", "Video Games", "Web Development"],
+# "http://dindin.io/" => ["Cooking", "Web Development"]
 }
 
 sites.each do |url, ints|

@@ -10,7 +10,8 @@ window.App.Views.WebsiteShow = Backbone.View.extend ({
         }
         // var content = this.template({website: this.model});
         // this.$el.html(content);
-        
+        debugger
+        this.$el.css('height', window.innerHeight - 51)
         return this;
     },
     
