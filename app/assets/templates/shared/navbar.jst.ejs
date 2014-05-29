@@ -12,8 +12,7 @@
       <div class="navbar-center navbar-flash navbar-section">
         <ul class="nav navbar-nav">
           <li>
-            <h3 class="flash-text">Welcome, <span class="username">
-              <%= current_user.get('username') %>!</span>
+            <h3 class="flash-text">
             </h3>
           </li>
         </ul>
@@ -58,7 +57,6 @@
                 <li class="dropdown-interest">
                   <img src="<%= src %>">
                   <%= int.get('name') %>
-                  <%= current_user.interests().length %>
                 </li>
                 <% }) %>
               </ul>
@@ -90,9 +88,3 @@
       </div>
     </div>
   </nav>
-
-  <script>
-    $(function () {
-      $(".navbar-flash").delay(3000).fadeOut(800)
-    });
-  </script

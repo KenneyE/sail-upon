@@ -5,7 +5,7 @@ class UsersController < ApplicationController
     if @user.save
       flash[:notices] = ["Welcome, #{@user.username}!"]
       login!(@user)
-      redirect_to "#/users/#{@user.id}"
+      redirect_to "#/interests"
     else
       flash[:errors] = @user.errors.full_messages
       render :new

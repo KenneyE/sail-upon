@@ -41,6 +41,8 @@ interests = {
 
   "Fitness" => "Considering that you're here, I don't believe you.",
 
+  "Games" => "We've got Dungeons and Dragons and music and drawing and literally everything.",
+
   "Generally Awesome" => "I don't know how to categorize this stuff. All I know is it's generally pretty awesome.",
 
   "Graphic Design" => "From logos to websites, graphic designers have perfected the art of visual communication. Check it out.",
@@ -65,7 +67,9 @@ interests = {
 
   "Trains" => "Trains are way underrated. Those things are so awesome. Why don't more people talk about that?",
 
-  "Video Games" => "So you love no-scoping newbs and crushing Code Red? Love it when a 13 year old calls you a punk bitch? Then come pwn some websites about it."
+  "Video Games" => "So you love no-scoping newbs and crushing Code Red? Love it when a 13 year old calls you a punk bitch? Then come pwn some websites about it.",
+
+  "Web Development" => "It's what makes the world go 'round."
   }
 
 
@@ -141,7 +145,6 @@ sites = {
 "http://www.flightradar24.com/t_blank/" => ["Airplanes"],
 "www.dtelepathy.com/blog/inspiration/beautiful-color-palettes-for-your-next-web-project/" => ["Graphic Design", "Art", "Photoshop"],
 "http://www.imgur.com/a/rNPff?gallery/" => ["Movies", "Art", "Graphic Design"],
-"www.panoramas.dk/mars/mars-greeleyhaven2/tour.swf/" => ["Astronomy", "Science"],
 "www.kitchendaily.com/read/best-burgers-us?ncid=dynaldusaolp00000175/" => ["Cooking"],
 "www.neave.com/strobe/" => ["Graphic Design", "Art"],
 "www.randyscottslavin.com/data/photos/93_1slavin_photography_8108.jpg/" => ["Photography"],
@@ -166,7 +169,21 @@ sites = {
 "onebigphoto.com/milky-way-over-mount-fuji/" => ["Photography", "Travel"],
 "http://www.barcinski-jeanjean.com/entries/endlessintrestingness/" => ["Generally Awesome"],
 "dfcovideo.com/random/29er-bike-completely-parallel-to-the-ground/" => ["Extreme Sports"],
-"www.totalfilm.com/features/20-upcoming-trailers-we-re-most-excited-about/" => ["Movies"]
+"www.totalfilm.com/features/20-upcoming-trailers-we-re-most-excited-about/" => ["Movies"],
+"http://www.youtube.com/watch?v=ZwwS4YOTbbw" => ["Science", "Technology", "Generally Awesome"],
+"green-landscape.com/town-with-so-perfect-views/" => ["Travel", "Photography"],
+"http://www.youtube.com/watch?feature=player_embedded&v=wNViNqHmnzM" => ["Movies"],
+"http://www.youtube.com/watch?feature=player_embedded&v=HHaJY6SL7GE" => ["Movies", "Art"],
+"www.adventure-journal.com/2014/02/weekend-cabin-lake-joseph-boathouse-new-york/" => ["Architecture", "Travel"],
+"www.pastemagazine.com/blogs/lists/2014/05/100-craft-beers-you-have-to-drink.html?a=1/" => ["Beer", "Cooking"],
+"airows.com/40-incredibly-creative-logo-designs-2/" => ["Graphic Design", "Art"],
+# "http://www.bookswithfriends.co/session/new" => ["Web Development", "Books"],
+# "http://sketchmate.herokuapp.com/" => ["Web Development", "Games", "Art"],
+# "http://air-dnd.herokuapp.com/" => ["Web Development", "Games"],
+# "http://kiva-for-paralegals.herokuapp.com/session/new" => ["Web Development"],
+# "http://www.swift-reader.com/" => ["Web Development", "Books"],
+"http://www.whatsgroovy.com/" => ["Web Development", "Music", "Games"]
+# "http://www.dindin.io/" => ["Cooking", "Web Development"]
 }
 
 sites.each do |url, ints|

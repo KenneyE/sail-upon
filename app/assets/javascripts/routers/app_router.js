@@ -47,7 +47,7 @@ App.Routers.AppRouter = Backbone.Router.extend({
             success: function () {
                 App.Collections.websites.add(site);
                 Backbone.history.navigate("sail/" + site.get('id'), 
-                                            {trigger: true}
+                                            {trigger: true, replace: true}
                                          );
             }
         });        

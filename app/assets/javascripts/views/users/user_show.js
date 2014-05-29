@@ -66,7 +66,8 @@ window.App.Views.UserShow = Backbone.CompositeView.extend ({
         $container.imagesLoaded( function () {
             $container.fadeIn('fast');
             $container.masonry({
-                itemSelector: '.interest-panel'
+                itemSelector: '.interest-panel',
+                isFitWidth: true
             });
         });
         return this;

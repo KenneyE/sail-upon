@@ -24,6 +24,7 @@ window.App.Views.InterestsIndex = Backbone.View.extend ({
             $container.fadeIn('fast');
             $container.masonry({
                 itemSelector: '.interest-panel',
+                isFitWidth: true
             });
         })
         

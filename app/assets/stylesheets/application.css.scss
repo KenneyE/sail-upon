@@ -123,6 +123,7 @@ li:hover, li:hover span{
 
 .sail-style-btn:focus {
     outline: none;
+    color: white;
 };
 
 .sail-style-btn:active {
@@ -169,8 +170,8 @@ li:hover, li:hover span{
 }
 
 .dropdown-interest:hover {
-    color: white;
-    background: #2D2D2D;
+    color: #444444;
+//    background: #2D2D2D;
 }
 
 .dropdown-interest img {

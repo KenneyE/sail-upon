@@ -30,6 +30,7 @@
                 >
             </div>
             <input type="submit" value="Set Sail..." class=" btn sail-style-btn">
+
         </form>
         <br><br>
         <% if sign_up %>
@@ -38,6 +39,8 @@
             Already a user?
           </button></a> -->
         <% else %>
+        <%= button_to "Sign Up", new_user_url, method: :get, class: "btn sail-style-btn sail-style-btn-lg" %>
+        <!-- <button class="btn sail-style-btn sail-style-btn-lg">Sign Up</button> -->
           <button class="btn sail-style-btn sail-style-btn-lg" id="guest-btn">
             Sail as a guest
           </button>
