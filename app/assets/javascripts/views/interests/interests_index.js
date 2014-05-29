@@ -15,12 +15,13 @@ window.App.Views.InterestsIndex = Backbone.View.extend ({
         });
         
         var $container = this.$el.find('#all-interests');
-        
+        $container.hide();
         $container.masonry({
             itemSelector: '.interest-panel',
         });        
         // initialize
         $container.imagesLoaded( function () {
+            $container.fadeIn('fast');
             $container.masonry({
                 itemSelector: '.interest-panel',
             });

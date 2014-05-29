@@ -58,10 +58,13 @@ window.App.Views.UserShow = Backbone.CompositeView.extend ({
         this.delegateEvents();
         
         var $container = this.$el.find('#user-interests');
+        $container.hide();
+        
         $container.masonry({
             itemSelector: '.interest-panel',
         });
         $container.imagesLoaded( function () {
+            $container.fadeIn('fast');
             $container.masonry({
                 itemSelector: '.interest-panel'
             });
