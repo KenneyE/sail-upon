@@ -217,11 +217,9 @@ sites = {
 "www.topgear.com/uk/car-news/peugeot-2008-dakar-car-revealed-red-bull-total-2014-04-15/" => ["Cars"],
 "coolmaterial.com/roundup/classic-cars-that-define-cool/" => ["Cars"],
 "ofironandoak.com/2013/05/cuban-cigars-a-forbidden-luxury/" => ["Cigars"],
-"www.sexcigarsbooze.com/wp-content/uploads/2012/05/How-to-smoke-a-cigar-infographic.jpg/" => ["Cigars"],
 "www.gentlemansgazette.com/cigar-guide-history-making-of-humidor/" => ["Cigars"],
 "www.werd.com/18031/ti2-sentinel-titanium-cache/" => ["Cigars"],
 "www.youtube.com/watch?v=ckqzMgWGzaY/" => ["Cigars"],
-"thisorthat.com/blog/10-comic-book-video-games-that-were-actually-good/" => ["Comics", "Video Games"],
 "oculoid.com/unique-styled-comic-book-heroes-by-chris-uminga/" => ["Comics"],
 "www.avclub.com/articles/who-am-i-this-time-13-comic-book-characters-with-c,53707/" => ["Comics"],
 "www.foodnetwork.com/recipes/articles/50-milkshakes.html/" => ["Cooking"],
@@ -240,7 +238,6 @@ sites = {
 "vimeo.com/15317426/" => ["Skiing"],
 "en.wikipedia.org/wiki/Steam_locomotive_components/" => ["Trains"],
 "www.oobject.com/category/20-railroad-snowplows/" => ["Trains"],
-"www.railpictures.net/images/d1/0/2/9/4029.1148472000.jpg/" => ["Trains"],
 "www.youtube.com/watch?v=MlA2INOpT78/" => ["Trains"],
 "www.railpictures.net/viewphoto.php?id=264331/" => ["Trains"]
 }
