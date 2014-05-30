@@ -11,7 +11,7 @@
     text-align: center;
 }
 
-.profile-row {
+.profile-row, .about-row{
     position: relative;
     display: none;
     height: 275px;
@@ -27,6 +27,13 @@
 }
 
 .profile-row .user-info { font-size: 28px; }
+
+.about-row .about-info {
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 200;
+}
 
 .data-count { position: relative; bottom: -120px; display: inline-block;}
 .data-count * {margin: 0 10px;}

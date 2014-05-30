@@ -4,7 +4,7 @@
       <ul class="nav navbar-nav navbar-profile">
         <li><a id="first" href="#/interests">Add Interests</a></li>
         <li class="profile-btn"><a href="#/user/1">Profile</a></li>
-        <li><a href="#/about">About SU</a></li>
+        <li class="about-btn"><a href="#/user/1">About SU</a></li>
       </ul>
     </div>
   </div>
@@ -30,16 +30,27 @@
   </div>
 </div>
 
-<div class="row user-profile-header">
-      <% if (user.interests().length === 0) { %>
-        <h1>You have no interests! <a href="#/interests">Pick some!</a></h1>
+
+<div class="row about-row black">
+  <div class="about-info">
+    <h1>SailUpon</h1>
+    <p>SailUpon was created by me, Eric Kenney, as a final project during my time at the App Academy in 2014. SailUpon was built as a clone of the site <a href="http://www.stumbleupon.com" target="_blank">StumbleUpon</a>, using that site as a guideline for functionality and styling. SailUpon uses a Ruby on Rails back-end with a Backbone.js front-end. Once you are logged in, the site acts as a single page using the Backbone framework to update the page's content. Enjoy, and feel free to submit new sites to Sail to.
+
+      <p>Feel free to <a href="mailto:ekenney5@gmail.com">email me</a> with any comments or questions about the site (or employment), and check me and the site out on GitHub (<a href="http://github.com/KenneyE">KenneyE</a> and <a href="http://github.com/KenneyE/sailupon">SailUpon</a>) or GitHub Pages (<a href="http://kenneye.github.io">KenneyE.github.io</a>).</p>
+    </div>
+  </div>
+
+
+  <div class="row user-profile-header">
+    <% if (user.interests().length === 0) { %>
+      <h1>You have no interests! <a href="#/interests">Pick some!</a></h1>
       <% } else { %>
         <h1>We've mapped the treacherous seas of the internet for you.</h1>
         <h2>Here are your interests</h2>
         <button class="sail-btn sail-style-btn">Sail</button>
-      <% } %>
-</div>
+        <% } %>
+      </div>
 
-<div class="row">
-    <div class="interests" id="user-interests"></div>
-</div>
+      <div class="row">
+        <div class="interests" id="user-interests"></div>
+      </div>

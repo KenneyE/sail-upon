@@ -23,16 +23,39 @@ window.App.Views.UserShow = Backbone.CompositeView.extend ({
     
     events: {
         "click .profile-btn": "expandProfile",
+        "click .about-btn": "expandAbout",
         "click .sail-btn": "sail",
     },
     
     expandProfile: function (event) {
-        $div = $( ".profile-row" );
-        if ( $div.is (":hidden") ) {
-           $div.slideDown("slow");            
+        var view = this;
+        var $about = $( ".about-row" );
+        var $div = $( ".profile-row" );
+        if ( !$about.is (":hidden") ) {
+           $about.slideUp("fast", view.toggleRow($div, 'fast'));            
         } else {
-            $div.slideUp("slow");
+            view.toggleRow($div, 'slow');
         }
+    },
+    
+    expandAbout: function (event) {
+        
+        var view = this;
+        var $profile = $( ".profile-row" );
+        var $div = $( ".about-row" );
+        if ( !$profile.is (":hidden") ) {
+           $profile.slideUp("fast", view.toggleRow($div, 'fast'));            
+        } else {
+            view.toggleRow($div, 'slow');
+        }
+    },
+    
+    toggleRow: function ($div, speed) {
+        if ( $div.is (":hidden") ) {
+           $div.slideDown(speed);            
+        } else {
+            $div.slideUp(speed);
+        } 
     },
     
     removeInterest: function (interest) {
