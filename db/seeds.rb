@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-guest = User.create(username: "Guest User", password: "guestpassword")
+guest = User.create(username: "Guest User", password: "guestpassword", sail_count: 112)
 eric = User.create(username: "Eric", password: "foobar")
 
 interests = {
@@ -242,6 +242,7 @@ sites = {
 "www.railpictures.net/viewphoto.php?id=264331/" => ["Trains"]
 }
 
+site_count = 0
 sites.each do |url, ints|
   site = Website.create(url: url, title: "Sample Site", submitter_id: 1)
 
@@ -251,4 +252,7 @@ sites.each do |url, ints|
       WebsiteInterest.create(website_id: site.id, interest_id: int_model.id )
     end
   end
+
+  Vote.create(user: guest, website: site, upvote: [true, false].sample) if site_count % 5 == 0
+  site_count += 1
 end
