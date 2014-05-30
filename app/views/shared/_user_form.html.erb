@@ -1,5 +1,5 @@
 <% action = sign_up ? users_url : session_url %>
-<% text = sign_up ? "Sign up with SailUpon." : "Sign in to SailUpon." %>
+<% text = sign_up ? "Sign up." : "Sign in." %>
 
 <!-- <div class="logo">
   <img src="/logo_full.png">
@@ -7,7 +7,7 @@
 <div class="row">
     <div class="col-xs-8 col-xs-offset-2 sign-up">
         <h1 class="form-header">Sail the seas of the interweb.</h1>
-        <!-- <h2 class="form-header"><%= text %></h1> -->
+        <h2 class="form-header"><%= text %></h1>
         <div class="col-xs-6 col-xs-offset-3">
         <form action="<%= action %>" method="POST">
             <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
@@ -29,7 +29,7 @@
                 placeholder="Enter Password"
                 >
             </div>
-            <input type="submit" value="Set Sail..." class=" btn sail-style-btn">
+            <input type="submit" value="Set Sail..." class=" btn sail-style-btn" id="sign-in">
 
         </form>
         <br><br>
@@ -39,11 +39,14 @@
             Already a user?
           </button></a> -->
         <% else %>
-        <%= button_to "Sign Up", new_user_url, method: :get, class: "btn sail-style-btn sail-style-btn-lg" %>
+
+        <button class="btn sail-style-btn sail-style-btn-lg" id="guest-btn">
+          Sail as a guest
+        </button>
+
+        <%= button_to "Go to sign Up", new_user_url, method: :get, class: "btn sail-style-btn sail-style-btn-lg" %>
         <!-- <button class="btn sail-style-btn sail-style-btn-lg">Sign Up</button> -->
-          <button class="btn sail-style-btn sail-style-btn-lg" id="guest-btn">
-            Sail as a guest
-          </button>
+
         <% end %>
       </div>
     </div>
@@ -53,5 +56,6 @@
 $('#guest-btn').on('click', function () {
   $('#user-username').val('Guest User');
   $('#user-password').val('guestpassword');
+  $('#sign-in').trigger('click');
 })
 </script>
