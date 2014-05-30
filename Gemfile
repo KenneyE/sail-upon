@@ -39,4 +39,8 @@ group :development do
 end
 
 gem 'rails_12factor'
+gem 'dalli'
+gem 'memcachier'
+gem 'newrelic_rpm'
+gem "figaro"
 # gem 'nokogiri'
