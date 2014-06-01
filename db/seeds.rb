@@ -61,6 +61,8 @@ interests = {
 
   "Science"  => "You ever watched Breaking Bad and think, 'I could do that!'?",
 
+  "Shopping" => "You want some clothes? You want some electronics? What you want? I got you.",
+
   "Skiing" => "Love sending it to the moon on a blower day? Love shuttin er down with one big McConkey turn? Love blue bird days with all time pow? Love hanging it out to dry off a dope kicker? Are your Pontoons not wide enough?",
 
   "Technology" => "Gizmos and gadgets.",
@@ -239,7 +241,20 @@ sites = {
 "en.wikipedia.org/wiki/Steam_locomotive_components/" => ["Trains"],
 "www.oobject.com/category/20-railroad-snowplows/" => ["Trains"],
 "www.youtube.com/watch?v=MlA2INOpT78/" => ["Trains"],
-"www.railpictures.net/viewphoto.php?id=264331/" => ["Trains"]
+"www.railpictures.net/viewphoto.php?id=264331/" => ["Trains"],
+"www.hackstarter.co" => ["Web Development", "Generally Awesome"],
+"http://everestavalanchetragedy.com/mt-everest-journey.html" => ["Generally Awesome", "Skiing"],
+"http://www.fivestar.io/" => ["Shopping"],
+"http://www.yvoschaap.com/chainrxn/" => ["Games", "Video Games"],
+"http://phoboslab.org/ztype/" => ["Video Games", "Games"],
+"http://2f43ed46b464e2cc69b7-989229c38fe1e8123345576c81be39fb.r39.cf2.rackcdn.com/best-game-final-150dpi.jpg" => ["Video Games"],
+"bookshelfporn.com/tagged/favorites/" => ["Books"],
+"www.nasa.gov/content/coronal-loops-in-an-active-region-of-the-sun/" => ["Astronomy", "Science"],
+"www.ignant.de/2013/01/30/anamorphic-sculptures/" => ["Art"],
+"www.pica-pic.com/" => ["Video Games"],
+"hikingboots.com/appalachian-trail/" => ["Camping"],
+"http://dodoburd.com/subscription-boxes-for-men/" => ["http://dodoburd.com/subscription-boxes-for-men/"],
+"www.contemporist.com/2014/04/02/armada-house-by-kb-design/" => ["Architecture"]
 }
 
 site_count = 0
