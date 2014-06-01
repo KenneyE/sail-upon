@@ -254,8 +254,16 @@ sites = {
 "www.pica-pic.com/" => ["Video Games"],
 "hikingboots.com/appalachian-trail/" => ["Camping"],
 "http://dodoburd.com/subscription-boxes-for-men/" => ["http://dodoburd.com/subscription-boxes-for-men/"],
-"www.contemporist.com/2014/04/02/armada-house-by-kb-design/" => ["Architecture"]
+"www.contemporist.com/2014/04/02/armada-house-by-kb-design/" => ["Architecture"],
+"coolmaterial.com/roundup/25-books-that-define-cool/" => ["Books"],
+"http://www.powdermag.com/category/photo-of-the-day/" => ["Skiing"],
+"www.hackthelife.net/food-hacks/top-25-delicious-breakfast-hacks/" => ["Cooking"],
+"remycarreiro.com/five-documentaries-need-watch-netflix-111313/" => ["Movies"],
+"http://koalastothemax.com/" => ["Web Development", "Graphic Design"],
+"webdesignledger.com/freebies/50-time-saving-photoshop-actions-for-enhancing-photos/" => ["Photoshop"],
+"http://propergraphics.com/3dlowpoly/Koenigsegg/Koenigsegg_12_1920.jpg" => ["Cars"]
 }
+
 
 site_count = 0
 sites.each do |url, ints|
